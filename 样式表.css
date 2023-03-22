@@ -7,3 +7,14 @@ p#p2{
 p#p3{
   color: darkkhaki;
 }
+body{
+  background-color:darksalmon;
+}
+ul#学业{
+  width: 100px;
+  height: 250px;
+  background: #008c8c;
+  border: 2px solid red;
+  padding: 30px;
+  
+}
