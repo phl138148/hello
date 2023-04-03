@@ -6,248 +6,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    body,html{
+    body{
       margin: 0;
-      box-sizing: border-box;
-      xposition: relative;
-      background-color: aqua;
-      xz-index: 0;
     }
-    .file{
-      display: inline-block;
-      position: relative;
-      background-color:red;
-      margin: 0;
-      box-sizing: border-box;
-      top:0;
-      height: 25px;
-      width: 50px;
-      text-align: center;
-      border-right:1px black solid ;
-    }
-    .ul1{
-      /* position:absolute ;
-      top:25px;
-      background-color: grey;
-      margin: 0;
-      box-sizing: border-box;
-      list-style: none;
-      width: 120px;
-      z-index: 2;
-      padding: 0; */
-      display: none;
-    }
-    .file:hover > .ul1 {
-      display: block;
-      position:absolute ;
-      top: 25px;
-      background-color: grey;
-      margin: 0;
-      box-sizing: border-box;
-      list-style: none;
-      width: 120px;
-      z-index: 6;
+    ul{
       padding: 0;
+      list-style: none;
     }
+    .menu{
+      /* margin: 0;
+      box-sizing: border-box; */
+      font-size: 0;
+    }
+    .menu > li{
+      font-size: 16px;
+      display: inline-block;
 
-    .bianji{
-      display: inline-block;
-      position: relative;
-      background-color:red;
-      margin: 0;
-      box-sizing: border-box;
-      top:0;
-      height: 25px;
-      width: 50px;
-      text-align: center;
-      left: -4px;
-    }
-    .main{
-      position: absolute;
-      top: 25px;
-      background-color: purple;
-      z-index: 3;
-    }
-    .ul2{
-      /* position: absolute;
-      margin: 0;
-      box-sizing: border-box;
-      list-style: none;
-      top: 0;
-      left: 120px;
-      background-color:yellow;
-      width: 120px;
-      padding: 0;
-      z-index: 1; */
-      display: none;
-    }
-    .li1:hover > .ul2{
-      display: block;
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      list-style: none;
-      top: 0;
-      left: 120px;
-      background-color:yellow;
-      width: 120px;
-      z-index: 5;
-    }
-    .ul3{
-      display: none;
-    }
-    .li2:hover > .ul3{
-      display: block;
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      list-style: none;
-      top: 20px;
-      left: 120px;
-      background-color:green;
-      width: 120px;
-      z-index: 5;
-    }
-    li{
-      border-bottom:1px black solid ;
-      height: 20px;
-      list-style: none;
-    }
-    .ul4{
-      /* position:absolute ;
-      top:25px;
-      background-color: grey;
-      margin: 0;
-      box-sizing: border-box;
-      list-style: none;
-      width: 120px;
-      z-index: 2;
-      padding: 0; */
-      display: none;
-    }
-    .bianji:hover > .ul4 {
-      display: block;
-      position:absolute ;
-      top: 25px;
+      border: 1px black solid;
 
       background-color: grey;
-      margin: 0;
-      box-sizing: border-box;
-      list-style: none;
-      width: 120px;
-      z-index: 6;
-      padding: 0;
+
     }
-    .ul5{
-      /* position: absolute;
-      margin: 0;
-      box-sizing: border-box;
-      list-style: none;
-      top: 0;
-      left: 120px;
-      background-color:yellow;
-      width: 120px;
-      padding: 0;
-      z-index: 1; */
-      display: none;
+    .menu li:hover{
+      background-color: yellow;
     }
-    .li3:hover > .ul5{
-      display: block;
+    .menu li{
+      position: relative;
+      white-space: nowrap;
+    }
+    .menu ul{
+      xdisplay: none;
       position: absolute;
-      margin: 0;
-      padding: 0;
+      left: 0;
+      top: 100%;
       box-sizing: border-box;
-      list-style: none;
-      top: 0;
-      left: 120px;
-      background-color:yellow;
-      width: 120px;
-      z-index: 5;
+      xborder: 1px black solid;
+      margin: 0;
+      background-color: blanchedalmond;
+
     }
-    .ul6{
+    .menu ul li{
       display: none;
+      padding-right:6em ;
     }
-    .li4:hover > .ul6{
+    .menu ul ul{
+      /* display: none;
+      position: absolute; */
+      top: 0;
+      left: 100%;
+      /* padding-right: 6em;
+      font-size: 16px; */
+
+
+    }
+    .menu li:hover > ul > li{
       display: block;
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      list-style: none;
-      top: 20px;
-      left: 120px;
-      background-color:green;
-      width: 120px;
-      z-index: 5;
     }
-    li{
-      border-bottom:1px black solid ;
-      height: 20px;
-      list-style: none;
+    .menu ul li ul::before{
+      content: '>';
+      position: absolute;
+      right: 100%;
+      margin-right: 5px;
     }
   </style>
 </head>
 <body>
-  <div class="file">文件
-    <ul class="ul1">
-      <li class="li1">打开最近的文件
-        <ul class="ul2">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-        </ul>
-      </li>
-      <li class="li2">共享
-        <ul class="ul3">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-        </ul>
-      </li>
-      <li>首选项</li>
-    </ul>
-
-
-
-  </div>
-
-  <div class="bianji">编辑
-    <ul class="ul4">
-      <li class="li3">打开最近的文件
-        <ul class="ul5">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-        </ul>
-      </li>
-      <li class="li4">共享
-        <ul class="ul6">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-        </ul>
-      </li>
-      <li>首选项</li>
-    </ul>
-
-  </div>
-  <div class="main">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi libero beatae hic voluptatibus aliquid quidem dolore corporis, sint tenetur ab eius iure voluptates minus quisquam dignissimos laudantium, iusto sapiente facilis.
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur minima autem quo, sequi rerum accusantium odit quibusdam laborum libero error inventore praesentium a harum. Neque a harum nulla id aspernatur!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium voluptas reprehenderit natus ea at ipsa doloribus adipisci ullam, culpa eum provident debitis repellendus. Odit placeat asperiores quia hic enim ad.
-  </div>
+  <ul class="menu">
+    <li>文件
+      <ul>
+        <li>打开</li>
+        <li>另存为
+          <ul>
+            <li>打开新文件</li>
+            <li>打开旧文件
+              <ul>
+                <li>打开新文件</li>
+                <li>打开旧文件</li>
+                <li>打开最近文件</li>
+                <li>达达</li>
+                <li>打算复读发</li>
+              </ul>
+            </li>
+            <li>打开最近文件</li>
+            <li>达达</li>
+            <li>打算复读发</li>
+          </ul>
+        </li>
+        <li>保存</li>
+        <li>关闭</li>
+        <li>新建</li>
+      </ul>
+    </li>
+    <li>编辑</li>
+    <li>查看</li>
+    <li>选择</li>
+  </ul>
 </body>
 </html>
