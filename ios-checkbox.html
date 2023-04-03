@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .border{
+    width:300px;
+    height: 150px;
+    box-sizing: border-box;
+    border: 1px black solid;
+    background-color: #fff;
+    border-radius: 150px;
+    transition: background-color 0.7s;
+  }
+  .botton{
+    height: 130px;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+    margin-left: 10px;
+    margin-right: 160px;
+    box-sizing: border-box;
+    background-color:white;
+    box-shadow: 0px 0px 10px 0px;
+    border-radius: 70px;
+    transition: margin-right .5s ease-in,margin-left .5s ease-out;
+  }
+  .border:has(>:active){
+   background-color: rgb(50, 250,77);
+  }
+  .botton:active{
+    margin-right:10px ;
+    margin-left:160px ;
+    transition: margin-right .5s ease-out,margin-left .5s ease-in;
+  }
+  </style>
+</head>
+<body>
+  <div class="border">
+    <div class="botton"></div>
+
+
+  </div>
+</body>
+</html>
