@@ -19,7 +19,8 @@
 
     display: flow-root;
   } */
-  .border{
+  input + label.border{
+    display: block;
     width:100px;
     height: 100px;
     margin: 0;
@@ -27,21 +28,22 @@
     overflow:hidden ;
     border: 1px solid black;
   }
-  img{
+  input + label.border img{
     margin-left: 0;
-    transition: margin-left steps(7) 2s;
-  }
-  img:active{
-    margin-left: -2800px;
 
+  }
+  input:checked + label img{
+    margin-left: -2800px;
+    transition: margin-left steps(28) 1s;
   }
   </style>
 </head>
 <body>
-  <div class="border">
+  <input type="checkbox" id="a" hidden>
+  <label class="border" for="a">
 
       <img src="1_MTZW1G1mE7LSX1CnhTYeHA.png" alt="">
 
-  </div>
+  </label>
 </body>
 </html>
