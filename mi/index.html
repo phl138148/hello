@@ -225,26 +225,41 @@
       text-decoration: none;
       color: black;
     }
-
+    .childrenlistbox{
+      position:fixed;
+      width: 100%;
+      height: 228px;
+      background-color:white;
+      top: 128px;
+      left: 0px;
+      margin: 0;
+      border-top: 0.8px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+      display: none;
+      z-index: 2;
+      transition: 5s ;
+    }
     .childrenlist{
       position: relative;
-
-      top:100px;
       left: 0;
       width: 1226px;
       margin-left: auto;
       margin-right: auto;
-      xheight: 229px;
-      border-top: 0.8px solid #e0e0e0;
-      xbackground-color: red;
-      display: none;
-      xborder-bottom:1px solid black ;
+
+
+      xbackground-color:black;
+
+
+
+
     }
-    .childrenlist ul{
+    .childrenlist .pictureul{
+      width: 1226px;
       margin: 0;
       padding: 0;
       list-style-type: none;
-      font-size: 12px;
+      xfont-size: 12px;
+
     }
     .childrenlist li{
       position: relative;
@@ -254,6 +269,7 @@
       text-align: center;
       font-size: 12px;
       list-style: none;
+      background-color:white;
     }
     .childrenlist li a{
       text-decoration: none;
@@ -286,19 +302,38 @@
       color: orange;
       cursor: pointer;
     }
-    .menu2:hover ~ .childrenlist{
+    #p1:hover  .childrenlistbox{
       display: block;
+
     }
-    .childrenlist:hover{
+    .childrenlistbox:hover{
       display: block;
     }
     .sitecategory{
+      display: flex;
+      flex-flow: column;
+      justify-content: space-around;
       position: absolute;
       top: 88px;
       width: 234px;
       height: 460px;
       font-size: 14px;
-      background-color: red;
+      background-color:rgb(165,163,163);
+      padding: 20px 0px;
+      xdisplay: none;
+    }
+    .sitecategory div {
+      width: 234px;
+      height: 42px;
+
+    }
+    .sitecategory div span {
+      padding-left: 30px;
+      line-height: 42px;
+      height: 42px;
+    }
+    .sitecategory div:hover{
+      background-color: rgb(255,103,0);
     }
   </style>
 </head>
@@ -353,7 +388,45 @@
    <div class="menu2">
     <ul class="commodity">
      <li id="hallcommodity"><span></span></li>
-     <li><span>Xiaomi手机</span></li>
+     <li  id="p1">
+      <span>Xiaomi手机</span>
+      <div class="childrenlistbox">
+        <div class="childrenlist">
+          <ul class="pictureul">
+           <li><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c758eb7e0dce4307c62c47155519bc80.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi 13</div>
+             <p>3999元起</p>
+           </a></li>
+           <li><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/11e28a0a7c6a2ca07f0dc2044d3858c2.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi 13 pro</div>
+             <p>4999起</p>
+           </a></li>
+           <li><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/581f3a690e6803add02e4c9fde98cb78.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi MIX Fold 2</div>
+             <p>8999元起</p>
+           </a></li>
+           <li><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4ef3713521fb9d7f114aa8bb152e220d.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi Civi 2</div>
+             <p>2299元起</p>
+           </a></li>
+           <li><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fea69fb5990da9dfc909aa8279aaea7e.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi 11 青春活力版</div>
+             <p>1399元起</p>
+           </a></li>
+           <li ><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9c06f92c3216c90a566916e719935018.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi 13 限量定制色</div>
+             <p>4999元起</p>
+           </a></li>
+          </ul>
+        </div>
+       </div>
+     </li>
      <li><span>Redmi手机</span</li>
      <li><span>电视</span></li>
      <li><span>笔记本</span></li>
@@ -364,6 +437,7 @@
      <li><span>社区</span></li>
     </ul>
    </div>
+
    <div class="searchbox">
     <input type="search" id="search">
     <input type="submit" id="submit">
@@ -381,55 +455,21 @@
     </div>
    </div>
 
-   <div class="childrenlist">
-     <ul>
-      <li><a href="">
-        <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c758eb7e0dce4307c62c47155519bc80.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
-        <div class="title">xiaomi 13</div>
-        <p>3999元起</p>
-      </a></li>
-      <li><a href="">
-        <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/11e28a0a7c6a2ca07f0dc2044d3858c2.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
-        <div class="title">xiaomi 13 pro</div>
-        <p>4999起</p>
-      </a></li>
-      <li><a href="">
-        <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/581f3a690e6803add02e4c9fde98cb78.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
-        <div class="title">xiaomi MIX Fold 2</div>
-        <p>8999元起</p>
-      </a></li>
-      <li><a href="">
-        <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4ef3713521fb9d7f114aa8bb152e220d.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
-        <div class="title">xiaomi Civi 2</div>
-        <p>2299元起</p>
-      </a></li>
-      <li><a href="">
-        <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fea69fb5990da9dfc909aa8279aaea7e.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
-        <div class="title">xiaomi 11 青春活力版</div>
-        <p>1399元起</p>
-      </a></li>
-      <li><a href="">
-        <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9c06f92c3216c90a566916e719935018.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
-        <div class="title">xiaomi 13 限量定制色</div>
-        <p>4999元起</p>
-      </a></li>
-     </ul>
-   </div>
+
    <div class="sitecategory">
-    <ul>
-      <li>手机</li>
-      <li>电视</li>
-      <li>家电</li>
-      <li>笔记本 平板</li>
-      <li>出行 穿戴</li>
-      <li>耳机 音箱</li>
-      <li>健康 儿童</li>
-      <li>生活 箱包</li>
-      <li>智能 路由器</li>
-      <li>电源 配件</li>
-    </ul>
+    <div><span>手机</span></div>
+    <div><span>电视</span></div>
+    <div><span>家电</span></div>
+    <div><span>笔记本 平板</span></div>
+    <div><span>出行 穿戴</span></div>
+    <div><span>耳机 音箱</span></div>
+    <div><span>健康 儿童</span></div>
+    <div><span>生活 箱包</span></div>
+    <div><span>智能 路由器</span></div>
+    <div><span>电源 配件</span></div>
    </div>
   </div>
+
 </div>
 </body>
 </html>
