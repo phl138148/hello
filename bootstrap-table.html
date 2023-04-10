@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,html{
+      margin: 10px;
+      width: 100%;
+      height: 100%;
+    }
+    .table{
+      border-collapse: collapse;
+      xborder: 0.5px solid grey;
+      width: 683px;
+      height: 163px;
+      vertical-align: top;
+      padding: 25px;
+
+    }
+    .table th,.table td{
+
+      border-bottom: .5px solid grey;
+      padding: 8px;
+      text-align:left;
+      box-sizing: border-box;
+
+    }
+    .table-striped{
+      border-collapse: collapse;
+      xborder: 0.5px solid grey;
+      width: 683px;
+      height: 163px;
+      vertical-align: top;
+      padding: 25px;
+
+    }
+    .table-striped th,.table-striped td{
+
+      border:0;
+      padding: 8px;
+      text-align:left;
+      box-sizing: border-box;
+
+    }
+    .table-striped tbody tr:nth-child(1),
+    .table-striped tbody tr:nth-child(3){
+      background-color:rgb(242,242,242);
+    }
+    .table-dark{
+      background-color:rgb(33,37,41) ;
+      color: white;
+      border-collapse: collapse;
+      xborder: 0.5px solid grey;
+      width: 683px;
+      height: 163px;
+      vertical-align: top;
+      padding: 25px;
+
+    }
+    .table-dark tbody tr:nth-child(1),
+    .table-dark tbody tr:nth-child(3){
+      background-color:rgb(44,48,52);
+    }
+    .table-dark th,.table-dark td{
+
+       border:0;
+       padding: 8px;
+       text-align:left;
+       box-sizing: border-box;
+    }
+    .table-bordered{
+      border-collapse: collapse;
+      xborder: 0.5px solid grey;
+      width: 683px;
+      height: 163px;
+      vertical-align: top;
+      padding: 25px;
+
+    }
+    .table-bordered th,.table-bordered td{
+
+      border: 1px solid rgb(222,226,230);
+      padding: 8px;
+      text-align:left;
+      box-sizing: border-box;
+
+    }
+    .table-hover{
+      background-color:rgb(33,37,41) ;
+      color: white;
+      border-collapse: collapse;
+      xborder: 0.5px solid grey;
+      width: 683px;
+      height: 163px;
+      vertical-align: top;
+      padding: 25px;
+
+    }
+    .table-hover th,.table-hover td{
+
+      border-bottom: 1px solid rgb(55,59,62);
+      padding: 8px;
+      text-align:left;
+      box-sizing: border-box;
+
+    }
+    .table-hover tbody tr:hover{
+      background-color: rgb(50,53,57);
+    }
+    .table-sm{
+      border-collapse: collapse;
+      xborder: 0.5px solid grey;
+      width: 650px;
+      height: 150px;
+      vertical-align: top;
+      padding: 15px;
+
+    }
+    .table-sm th,.table-sm td{
+
+      border-bottom: .5px solid grey;
+      padding: 4px;
+      text-align:left;
+      box-sizing: border-box;
+
+    }
+  </style>
+</head>
+<body>
+  <table class="table table-dark table-striped table-bordered table-hover table-sm">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
