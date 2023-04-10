@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    table{
+      xborder-collapse: collapse;
+      border-spacing: 0;
+      margin: 0;
+      border: 1px solid blue;
+    }
+    td{
+      width: 50px;
+      height: 50px;
+      border: 1px solid blue;
+      text-align: center;
+    }
+    td:hover{
+      border: 1px red solid;
+      outline: 1px red solid;
+    }
+    tr:has(td:last-child:hover) td:nth-child(2),
+    tr:has(td:nth-child(2):hover) td:nth-child(1){
+      border-right: 1px solid red;
+    }
+    tbody:has(.tr2 td:first-child:hover) .tr1 td:first-child,
+    tbody:has(.tr2 td:nth-child(2):hover) .tr1 td:nth-child(2),
+    tbody:has(.tr2 td:nth-child(3):hover) .tr1 td:nth-child(3){
+      border-bottom:1px red solid ;
+    }
+    tbody:has(.tr3 td:first-child:hover) .tr2 td:first-child,
+    tbody:has(.tr3 td:nth-child(2):hover) .tr2 td:nth-child(2),
+    tbody:has(.tr3 td:nth-child(3):hover) .tr2 td:nth-child(3){
+      border-bottom:1px red solid ;
+    }
+  </style>
+</head>
+<body>
+ <div>
+  <table>
+    <tbody>
+      <tr class="tr1">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr class="tr2">
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr class="tr3">
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+  </table>
+ </div>
+</body>
+</html>
