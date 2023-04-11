@@ -113,7 +113,7 @@
       background-image: url(//cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/img/logo-mi2.png);
       background-size: 56px;
     }
-    .logo a:hover{
+    .logo a:active{
      margin-left: 2px;
      background-size: 53px;
      background-repeat: no-repeat;
@@ -331,9 +331,351 @@
       padding-left: 30px;
       line-height: 42px;
       height: 42px;
+      color: white;
     }
-    .sitecategory div:hover{
+    .sitecategory > div:hover{
       background-color: rgb(255,103,0);
+    }
+    .sitecategory div span:nth-child(2){
+      float: right;
+      padding-right:30px ;
+    }
+    .sitecategory .shouji .shoujimenu{
+      display: flex;
+      flex-flow: column wrap;
+      height: 498px;
+      position: absolute;
+      top: 0;
+      left: 234px;
+      width: 530px;
+      border: 1px solid #e0e0e0;
+      background-color: red;
+      box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      display: none;
+      z-index: 3;
+    }
+    .sitecategory .shouji .shoujimenu div{
+      width: 265px;
+      height: 83px;
+      background-color:white;
+      box-sizing: border-box;
+      xborder: 1px solid;
+      zborder: 1px solid #e0e0e0;
+      xdisplay: none;
+    }
+    .sitecategory .shouji .shoujimenu::after{
+      content: "";
+      width:265px ;
+      height: 0px;
+      background-color: white;
+      xborder: 1px solid #e0e0e0;
+      box-sizing: border-box;
+      flex-grow: 1;
+      xdisplay: none;
+    }
+    .sitecategory .shouji .shoujimenu div a{
+      padding: 18px 20px;
+      text-decoration: none;
+      text-align: center;
+      color: black;
+      display: block;
+    }
+    .sitecategory .shouji .shoujimenu div a img{
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+      float: left;
+      vertical-align: middle;
+    }
+    .shouji:hover .shoujimenu
+    {
+      display: flex;
+    }
+    .sitecategory .ds .dsmenu{
+      display: flex;
+      flex-flow: column wrap;
+      height: 498px;
+      position: absolute;
+      top: 0;
+      left: 234px;
+      width: 795px;
+      border: 1px solid #e0e0e0;
+      background-color: white;
+      box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      display: none;
+      z-index: 3;
+
+    }
+    .sitecategory .ds .dsmenu div{
+      width: 265px;
+      height: 83px;
+      background-color:white;
+      box-sizing: border-box;
+      xborder: 1px solid;
+      zborder: 1px solid #e0e0e0;
+      xdisplay: none;
+    }
+    .sitecategory .ds .dsmenu::after{
+      content: "";
+      width:265px ;
+      height: 0px;
+      background-color: white;
+      xborder: 1px solid #e0e0e0;
+      box-sizing: border-box;
+      flex-grow: 1;
+      xdisplay: none;
+    }
+    .sitecategory .ds .dsmenu div a{
+      padding: 18px 20px;
+      text-decoration: none;
+      text-align: center;
+      color: black;
+      display: block;
+    }
+    .sitecategory .ds .dsmenu div a img{
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+      float: left;
+      vertical-align: middle;
+    }
+    .ds:hover .dsmenu
+    {
+      display: flex;
+    }
+    .lunbo{
+      width: 993px;
+      height: 500px;
+      position: relative;
+      top: 88px;
+      left: 234px;
+      overflow: hidden;
+      background-color: black;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .lunbo img{
+      position: absolute;
+      transition: 1.5s;
+      width: 100%;
+      height: 100%;
+      opacity: 0%;
+     }
+    .lunbo input{
+      display: none;
+     }
+    .lunbo input:checked + * + * + * + *{
+      opacity: 100%;
+      z-index: 1;
+    }
+    .botton{
+      white-space: nowrap;
+      position: absolute;
+      z-index:2;
+      bottom: 0;
+      right: 0;
+    }
+     .botton label{
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border: 1px solid black;
+      border-radius: 9999px;
+
+      text-indent: -99999px;
+      cursor: pointer;
+    }
+    label:hover{
+      background-color: grey;
+    }
+    input:nth-child(1):checked ~ .botton label:nth-child(1),
+    input:nth-child(2):checked ~ .botton label:nth-child(2),
+    input:nth-child(3):checked ~ .botton label:nth-child(3),
+    input:nth-child(4):checked ~ .botton label:nth-child(4) {
+      background-color: white;
+
+    }
+    .left{
+      xwhite-space: nowrap;
+      position: absolute;
+      z-index:2;
+      left:0 ;
+      width: 54px;
+      bottom: 212px;
+      height: 87px;
+      margin: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .left label{
+      width: 54px;
+      height: 87px;
+      cursor: pointer;
+    }
+    .left label{
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+      display: none;
+      font-size: 45px;
+      color:rgb(227, 227,227);
+     }
+    input:nth-child(1):checked ~ .left label:nth-child(1),
+    input:nth-child(2):checked ~ .left label:nth-child(2),
+    input:nth-child(3):checked ~ .left label:nth-child(3),
+    input:nth-child(4):checked ~ .left label:nth-child(4){
+      display: block;
+    }
+    .right{
+      position: absolute;
+      z-index:2;
+      right:0 ;
+      width: 54px;
+      bottom: 212px;
+      height: 87px;
+      margin: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .right label{
+      width: 54px;
+      height: 87px;
+      cursor: pointer;
+    }
+    .right label{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: none;
+      font-size: 45px;
+      color:rgb(227, 227,227);
+      padding-left: 15px;
+     }
+    input:nth-child(1):checked ~ .right label:nth-child(1),
+    input:nth-child(2):checked ~ .right label:nth-child(2),
+    input:nth-child(3):checked ~ .right label:nth-child(3),
+    input:nth-child(4):checked ~ .right label:nth-child(4){
+      display: block;
+    }
+    .xbyd{
+
+      position: relative;
+      top: 510px;
+      width: 1226px;
+      margin-left: auto;
+      margin-right: auto;
+      height:170px ;
+      background-color: white;
+    }
+    .xbydmenu{
+      display: flex;
+      flex-flow: wrap;
+      position: absolute;
+      width: 234px;
+      height: 170px;
+      background-color:rgb(95,87,80);
+    }
+    .xbydmenu div{
+      width: 70px;
+      height: 82px;
+      padding: 0 3px;
+      border: 1px solid rgb(102,94,87);
+      box-sizing: border-box;
+    }
+    .xbydmenu div a{
+      display: block;
+      width: 70px;
+      height: 46px;
+      padding-top: 18px;
+      font-size: 12px;
+      text-decoration: none;
+      color: rgb(207,205,203);
+      text-align: center;
+    }
+    .xbydmenu div a img{
+      width: 24px;
+      height: 24px;
+      margin-left: 23px;
+      margin-right: 23px;
+    }
+    .xbydmenu div a:hover{
+      color:rgb(255,244,210)
+    }
+    .xbydp1{
+      position: relative;
+      left: 248px;
+      width: 316px;
+      height: 170px;
+    }
+    .xbydp1 a img{
+      display: block;
+      height: 170px;
+      width:316px ;
+    }
+    .xbydp2{
+      position: relative;
+      left: 578px;
+      top: -170px;
+      width: 316px;
+      height: 170px;
+    }
+    .xbydp2 a img{
+      display: block;
+      height: 170px;
+      width:316px ;
+    }
+    .xbydp3{
+      position: relative;
+      left: 909px;
+      top: -340px;
+      width: 316px;
+      height: 170px;
+    }
+    .xbydp3 a img{
+      display: block;
+      height: 170px;
+      width:316px ;
+    }
+    .xbydp1:hover,
+    .xbydp2:hover,
+    .xbydp3:hover{
+      box-shadow:0 15px 30px rgba(0, 0, 0, 0.1) ;
+    }
+    .cbl{
+
+      position: fixed;
+      right: 0;
+      left: auto;
+      bottom: 40px;
+      background-color: white;
+      z-index: 999;
+    }
+    .cbl div a .cblp1{
+      padding-top: 10px;
+      padding-left: 3px;
+      width: 20px;
+      height: 20px;
+
+    }
+    .cbl div a .cblp2{
+      display: none;
+    }
+    .cbl div a{
+      display: block;
+      width: 25px;
+      height: 40px;
+      border: 1px solid rgb(245,245,245);
+    }
+    .cbl div a:hover .cblp1{
+      display: none;
+    }
+    .cbl div a:hover .cblp2{
+      padding-top: 10px;
+      padding-left: 3px;
+      width: 20px;
+      height: 20px;
+      display: block;
     }
   </style>
 </head>
@@ -454,22 +796,239 @@
       </ul>
     </div>
    </div>
-
-
    <div class="sitecategory">
-    <div><span>手机</span></div>
-    <div><span>电视</span></div>
-    <div><span>家电</span></div>
-    <div><span>笔记本 平板</span></div>
-    <div><span>出行 穿戴</span></div>
-    <div><span>耳机 音箱</span></div>
-    <div><span>健康 儿童</span></div>
-    <div><span>生活 箱包</span></div>
-    <div><span>智能 路由器</span></div>
-    <div><span>电源 配件</span></div>
+     <div class="shouji">
+       <span>手机</span>
+       <span>></span>
+       <div class="shoujimenu">
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+
+       </div>
+     </div>
+     <div class="ds">
+       <span>电视</span>
+       <span>></span>
+       <div class="dsmenu">
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=50&h=50&f=webp&q=90" alt="">
+            xiaomi MIXxilie
+          </a>
+        </div>
+       </div>
+     </div>
+     <div>
+       <span>家电</span>
+       <span>></span>
+     </div>
+     <div>
+      <span>笔记本 平板</span>
+       <span>></span>
+     </div>
+     <div>
+       <span>出行 穿戴</span>
+       <span>></span>
+     </div>
+     <div>
+       <span>耳机 音箱</span>
+       <span>></span>
+     </div>
+     <div>
+       <span>健康 儿童</span>
+       <span>></span>
+     </div>
+     <div>
+       <span>生活 箱包</span>
+       <span>></span>
+     </div>
+     <div>
+       <span>智能 路由器</span>
+       <span>></span>
+     </div>
+     <div>
+       <span>电源 配件</span>
+       <span>></span>
+     </div>
+   </div>
+   <div class="lunbo">
+    <input type="radio" name="lunbo1" id="s1-1" checked>
+    <input type="radio" name="lunbo1" id="s1-2">
+    <input type="radio" name="lunbo1" id="s1-3">
+    <input type="radio" name="lunbo1" id="s1-4">
+
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d7c21d01bbe93eafc7d07d3796a3c59c.jpg?thumb=1&w=1533&h=575&f=webp&q=90" alt="">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/08a9d7eec7b055bac247b5068f817b1d.jpg?thumb=1&w=1533&h=575&f=webp&q=90" alt="">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0d03df40a5e8ef760731a8f4f3f61172.jpg?w=2452&h=920" alt="">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6494adc68900269b551de5ba96bd10a9.jpg?thumb=1&w=1533&h=575&f=webp&q=90" alt="">
+      <div class="botton">
+        <label for="s1-1">1</label>
+        <label for="s1-2">2</label>
+        <label for="s1-3">3</label>
+        <label for="s1-4">4</label>
+      </div>
+      <div class="left">
+        <label for="s1-4" class="first"> < </label>
+        <label for="s1-1" class="second"> < </label>
+        <label for="s1-2" class="third"> < </label>
+        <label for="s1-3" class="forth"> < </label>
+      </div>
+      <div class="right">
+        <label for="s1-2" class="first"> > </label>
+        <label for="s1-3" class="second"> > </label>
+        <label for="s1-4" class="third"> > </label>
+        <label for="s1-1" class="forth"> > </label>
+      </div>
    </div>
   </div>
 
+</div>
+<div class="xbyd">
+  <div class="xbydmenu">
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt="">保障服务</a></div>
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/806f2dfb2d27978e33fe3815d3851fa3.png?w=48&h=48" alt="">企业团购</a></div>
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/eded6fa3b897a058163e2485532c4f10.png?w=48&h=48" alt="">F码通道</a></div>
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/43a3195efa6a3cc7662efed8e7abe8bf.png?w=48&h=48" alt="">米粉卡</a></div>
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f4846bca6010a0deb9f85464409862af.png?w=48&h=48" alt="">以旧换新</a></div>
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9a76d7636b08e0988efb4fc384ae497b.png?w=48&h=48" alt="">话费充值</a></div>
+  </div>
+  <div class="xbydp1"><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0cf5e958bc88727b50c5c5fba7a8f47a.jpg?w=632&h=340" alt=""></a></div>
+  <div class="xbydp2"><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6dd2f3e0de4e6cbba98fd3799cfa5bf7.jpg?w=632&h=340" alt=""></a></div>
+  <div class="xbydp3"><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d7d4be1a9e701e16de498f89b1865867.jpg?w=632&h=340" alt=""></a></div>
+</div>
+<div class="cbl">
+  <div><a href="">
+    <img class="cblp1" src="https://i8.mifile.cn/b2c-mimall-media/98a23aae70f25798192693f21c4d4039.png" alt="">
+    <img class="cblp2" src="https://i8.mifile.cn/b2c-mimall-media/74c4fcb4475af8308e9a670db9c01fdf.png" alt="">
+  </a></div>
+  <div><a href="">
+    <img class="cblp1" src="https://i8.mifile.cn/b2c-mimall-media/55cad219421bee03a801775e7309b920.png" alt="">
+    <img class="cblp2" src="https://i8.mifile.cn/b2c-mimall-media/41f858550f42eb1770b97faf219ae215.png" alt="">
+  </a></div>
+  <div><a href="">
+    <img class="cblp1" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/12eb0965ab33dc8e05870911b90f3f13.png" alt="">
+    <img class="cblp2" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/95fbf0081a06eec7be4d35e277faeca0.png" alt="">
+  </a></div>
+  <div><a href="">
+    <img class="cblp1" src="https://i8.mifile.cn/b2c-mimall-media/4f036ae4d45002b2a6fb6756cedebf02.png" alt="">
+    <img class="cblp2" src="https://i8.mifile.cn/b2c-mimall-media/5e9f2b1b0da09ac3b3961378284ef2d4.png" alt="">
+  </a></div>
+  <div><a href="">
+    <img class="cblp1" src="https://i8.mifile.cn/b2c-mimall-media/d7db56d1d850113f016c95e289e36efa.png" alt="">
+    <img class="cblp2" src="https://i8.mifile.cn/b2c-mimall-media/692a6c3b0a93a24f74a29c0f9d68ec71.png" alt="">
+  </a></div>
 </div>
 </body>
 </html>
