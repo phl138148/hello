@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .sjmenu{
+      display:inline-grid;
+      height: 458px;
+      xwidth: auto;
+      border: 1px solid #e0e0e0 ;
+      xbackground-color: red;
+      grid-auto-flow: column;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns:265px ;
+      grid-auto-columns: 265px;
+      padding: 2px 0;
+      box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      >div{
+        width: 265px;
+        height: 76px;
+        xbackground-color:red;
+        xpadding:2px 0;
+        margin:0;
+        >a{
+          display: block;
+          padding:18px 20px;
+          text-decoration: none;
+          color: black;
+          xtext-align: center;
+          font-size: 14px;
+          >img{
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .zncdmenu{
+      position: absolute;
+      top:500px;
+      left:10px;
+      width:1226px;
+      xheight: 200px;
+      background-color:rgb(245,245,245);
+      display: inline-grid;
+      grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: repeat(4,1fr);
+      gap: 15px;
+      .zncd1:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      }
+      .zncd1{
+        grid-row: 1/span 4;
+        >a{
+          height: 100%;
+          display: block;
+          >img{
+            width: 100%;
+            height:100%
+          }
+        }
+      }
+      .zncd2{
+        grid-row: 1/span 2;
+        >a{
+          display: block;
+          background-color: #fff;
+          height:100%;
+          text-decoration:none;
+          text-align:center;
+          >h3{
+            color: black;
+          }
+          .js{
+            color:rgb(176,176,176);
+          }
+          .price del{
+            color:rgb(176,176,176);
+          }
+          .price{
+            color: orange;
+          }
+          >img{
+            width: 160px;
+            height:160px;
+            padding: 0 37px 18px 37px;
+          }
+        }
+      }
+      .zncd2:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      }
+      .zncd3{
+        grid-row: 1/span 2;
+        >a{
+          display: block;
+          background-color: #fff;
+          height:100%;
+          text-decoration:none;
+          text-align:center;
+          >h3{
+            color: black;
+          }
+          .js{
+            color:rgb(176,176,176);
+          }
+          .price del{
+            color:rgb(176,176,176);
+          }
+          .price{
+            color: orange;
+          }
+          >img{
+            width: 160px;
+            height:160px;
+            padding: 0 37px 18px 37px;
+          }
+        }
+      }
+      .zncd3:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      }
+      .zncd4{
+        grid-row: 1/span 2;
+        >a{
+          display: block;
+          background-color: #fff;
+          height:100%;
+          text-decoration:none;
+          text-align:center;
+          >h3{
+            color: black;
+          }
+          .js{
+            color:rgb(176,176,176);
+          }
+          .price del{
+            color:rgb(176,176,176);
+          }
+          .price{
+            color: orange;
+          }
+          >img{
+            width: 160px;
+            height:160px;
+            padding: 0 37px 18px 37px;
+          }
+        }
+      }
+      .zncd4:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      }
+      .zncd5{
+        grid-row: 1/span 2;
+        >a{
+          display: block;
+          background-color: #fff;
+          height:100%;
+          text-decoration:none;
+          text-align:center;
+          >h3{
+            color: black;
+          }
+          .js{
+            color:rgb(176,176,176);
+          }
+          .price del{
+            color:rgb(176,176,176);
+          }
+          .price{
+            color: orange;
+          }
+          >img{
+            width: 160px;
+            height:160px;
+            padding: 0 37px 18px 37px;
+          }
+        }
+      }
+      .zncd5:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      }
+      .zncd6{
+        grid-row: 3/span 2;
+        >a{
+          display: block;
+          background-color: #fff;
+          height:100%;
+          text-decoration:none;
+          text-align:center;
+          >h3{
+            color: black;
+          }
+          .js{
+            color:rgb(176,176,176);
+          }
+          .price del{
+            color:rgb(176,176,176);
+          }
+          .price{
+            color: orange;
+          }
+          >img{
+            width: 160px;
+            height:160px;
+            padding: 0 37px 18px 37px;
+          }
+        }
+      }
+      .zncd6:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      }
+      .zncd7{
+        grid-row: 3/span 2;
+        >a{
+          display: block;
+          background-color: #fff;
+          height:100%;
+          text-decoration:none;
+          text-align:center;
+          >h3{
+            color: black;
+          }
+          .js{
+            color:rgb(176,176,176);
+          }
+          .price del{
+            color:rgb(176,176,176);
+          }
+          .price{
+            color: orange;
+          }
+          >img{
+            width: 160px;
+            height:160px;
+            padding: 0 37px 18px 37px;
+          }
+        }
+      }
+      .zncd7:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      }
+      .zncd8{
+        grid-row: 3/span 2;
+        >a{
+          display: block;
+          background-color: #fff;
+          height:100%;
+          text-decoration:none;
+          text-align:center;
+          >h3{
+            color: black;
+          }
+          .js{
+            color:rgb(176,176,176);
+          }
+          .price del{
+            color:rgb(176,176,176);
+          }
+          .price{
+            color: orange;
+          }
+          >img{
+            width: 160px;
+            height:160px;
+            padding: 0 37px 18px 37px;
+          }
+        }
+      }
+      .zncd8:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      }
+      .zncd9{
+        grid-row: 3/span 1;
+        >a{
+          display: block;
+          position: relative;
+          background-color: #fff;
+          height:100%;
+          width: 100%;
+          text-decoration:none;
+          text-align:center;
+          >h3{
+            color: black;
+            font-size: 14px;
+            margin: 0;
+            padding: 40px 110px 5px 0px;
+            font-weight: 400px;
+          }
+
+
+          .price{
+            color: orange;
+            margin: 0 110px 0 30px;
+            font-size: 12px;
+            text-align: left;
+          }
+          >img{
+            width: 80px;
+            height:80px;
+            position: absolute;
+            right: 20px;
+            top: 32px;
+          }
+        }
+      }
+      .zncd9:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      }
+      .zncd10{
+        grid-row: 4/span 1;
+        background-color:white;
+        >a{
+          display: block;
+          position: relative;
+          xbackground-color: red;
+          height:100%;
+          width: 100%;
+          text-decoration:none;
+          color:black;
+          >div{
+            font-size: 18px;
+            margin-top: 50px;
+          }
+        }
+      }
+      .zncd10:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,.18);
+      }
+    }
+    .ins{
+      width: 300px;
+      position: relative;
+      top: 800px;
+      height: 700px;
+      xborder: 1px solid;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(7,1fr);
+      >div{
+        border: 1px solid red;
+      }
+      >div:nth-child(4){
+        grid-column: 1/ span 2;
+        grid-row: 2/span 2;
+      }
+      >div:nth-child(11){
+        grid-column: 2/span 2;
+        grid-row: 5/span 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sjmenu">
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecfbf9d01c8a2605f0a6938093b23ad8.png?thumb=1&w=40&h=40&f=webp&q=90" alt="">手机</a></div>
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/827fae95d0f1d75f1535ef93e357b2af.png?thumb=1&w=40&h=40&f=webp&q=90" alt="">手机</a></div>
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/930ddc941c1e6c81042406440e88ac45.png?thumb=1&w=40&h=40&f=webp&q=90" alt="">手机</a></div>
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/930ddc941c1e6c81042406440e88ac45.png?thumb=1&w=40&h=40&f=webp&q=90" alt="">手机</a></div>
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/930ddc941c1e6c81042406440e88ac45.png?thumb=1&w=40&h=40&f=webp&q=90" alt="">手机</a></div>
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/930ddc941c1e6c81042406440e88ac45.png?thumb=1&w=40&h=40&f=webp&q=90" alt="">手机</a></div>
+    <div><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/930ddc941c1e6c81042406440e88ac45.png?thumb=1&w=40&h=40&f=webp&q=90" alt="">手机</a></div>
+  </div>
+  <div class="zncdmenu">
+    <div class="zncd1"><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c9550c95ee33a22dc8db677dada00f09.jpg?thumb=1&w=146&h=384&f=webp&q=90" alt=""></a></div>
+    <div class="zncd2"><a href="">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202207011906_e7f02b803d3da16ec56a611e790243ba.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+      <h3>小米手环7 Pro</h3>
+      <p class="js">全彩方形大屏 | 独立GPS定位 | 全天连续血氧饱和度监测</p>
+      <p class="price">
+        <span class="num">359</span>
+        元
+        <del><span class="num">399</span>元</del>
+      </p>
+    </a></div>
+    <div class="zncd3">
+      <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202207011906_e7f02b803d3da16ec56a611e790243ba.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+      <h3>小米手环7 Pro</h3>
+      <p class="js">全彩方形大屏 | 独立GPS定位 | 全天连续血氧饱和度监测</p>
+      <p class="price">
+        <span class="num">359</span>
+        元
+        <del><span class="num">399</span>元</del>
+      </p>
+    </a></div>
+    <div class="zncd4">
+      <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202207011906_e7f02b803d3da16ec56a611e790243ba.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+      <h3>小米手环7 Pro</h3>
+      <p class="js">全彩方形大屏 | 独立GPS定位 | 全天连续血氧饱和度监测</p>
+      <p class="price">
+        <span class="num">359</span>
+        元
+        <del><span class="num">399</span>元</del>
+      </p>
+    </a></div>
+    <div class="zncd5">
+      <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202207011906_e7f02b803d3da16ec56a611e790243ba.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+      <h3>小米手环7 Pro</h3>
+      <p class="js">全彩方形大屏 | 独立GPS定位 | 全天连续血氧饱和度监测</p>
+      <p class="price">
+        <span class="num">359</span>
+        元
+        <del><span class="num">399</span>元</del>
+      </p>
+    </a></div>
+    <div class="zncd6">
+      <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202207011906_e7f02b803d3da16ec56a611e790243ba.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+      <h3>小米手环7 Pro</h3>
+      <p class="js">全彩方形大屏 | 独立GPS定位 | 全天连续血氧饱和度监测</p>
+      <p class="price">
+        <span class="num">359</span>
+        元
+        <del><span class="num">399</span>元</del>
+      </p>
+    </a></div>
+    <div class="zncd7">
+      <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202207011906_e7f02b803d3da16ec56a611e790243ba.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+      <h3>小米手环7 Pro</h3>
+      <p class="js">全彩方形大屏 | 独立GPS定位 | 全天连续血氧饱和度监测</p>
+      <p class="price">
+        <span class="num">359</span>
+        元
+        <del><span class="num">399</span>元</del>
+      </p>
+    </a></div>
+    <div class="zncd8">
+      <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202207011906_e7f02b803d3da16ec56a611e790243ba.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+        <h3>小米手环7 Pro</h3>
+        <p class="js">全彩方形大屏 | 独立GPS定位 | 全天连续血氧饱和度监测</p>
+        <p class="price">
+          <span class="num">359</span>
+          元
+          <del><span class="num">399</span>元</del>
+        </p>
+    </a></div>
+    <div class="zncd9"><a href="">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202209261427_67cd5fddb341f0e0fb0a2295e643b0d8.png?thumb=1&w=83&h=83&f=webp&q=90" alt="">
+      <h3 class="title">
+        Xiaomi降噪蓝牙耳机Necklace
+      </h3>
+      <p class="price"><span class="num">399</span>元<!----></p>
+    </a></div>
+    <div class="zncd10"><a href=""><div>浏览更多<h5>耳机</h5></div></a></div>
+
+  </div>
+  <div class="ins">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div ></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+  </div>
+</body>
+</html>
