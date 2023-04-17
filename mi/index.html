@@ -387,6 +387,7 @@
       flex-grow: 0;
       position: relative;
       padding-left: 10px;
+      padding-right: 10px;
       background-color: rgb(66,66,66);
     }
     .shoppingcart a{
@@ -399,24 +400,30 @@
       }
     }
     .shpcm{
-      display: none;
+      /* display: none; */
+      position: absolute;
+      right:-4px;
+      top: 40px;
+      height: 0;
+
+      overflow: hidden;
 
     }
     .shoppingcart:hover .shpcm{
       display: block;
-      position: absolute;
-      top: 40px;
+
       background-color:white;
       color:black ;
       text-align: center;
       width: 316px;
-      height: 100px;
-      right:-4px;
+      height: 88px;
+
       padding-top: 20px;
       padding-bottom: 20px;
       box-sizing: border-box;
       box-shadow: 0 0 1px 0px rgba(0,0, 0, 0.5);
       z-index: 2;
+      transition: 0.6s;
     }
     .shoppingcart:hover{
       background-color: #fff;
@@ -577,82 +584,148 @@
     .childrenlistbox{
       position:fixed;
       width: 100%;
-      height: 228px;
+      height:0px;
       background-color:white;
       top: 128px;
       left: 0px;
       margin: 0;
-      border-top: 0.8px solid #e0e0e0;
-      border-bottom: 1px solid #e0e0e0;
-      display: none;
-      z-index: 2;
-      transition: 5s ;
+      xdisplay: none;
+      z-index: 3;
+      overflow: hidden;
+      xtransition: 5s ;
+      transition: 0.6s;
+      .childrenlist{
+        position: relative;
+        left: 0;
+        width: 1226px;
+        margin-left: auto;
+        margin-right: auto;
+        .pictureul{
+          width: 1226px;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          xfont-size: 12px;
+          >li{
+            position: relative;
+            float: left;
+            width: 180px;
+            padding: 35px 12px 0;
+            text-align: center;
+            font-size: 12px;
+            list-style: none;
+            background-color:white;
+            >a{
+              text-decoration: none;
+              color:black ;
+              >p{
+                color: orange;
+              }
+              .picture{
+                width: 160px;
+                height: 110px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 16px;
+                cursor: pointer;
+                border-right:1px solid #e0e0e0 ;
+                >img{
+                  width: 160px;
+                  height: 110px;
+                }
+              }
+              .title{
+                margin: 0;
+                line-height: 20px;
+                height: auto;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
     }
-    .childrenlist{
-      position: relative;
-      left: 0;
-      width: 1226px;
-      margin-left: auto;
-      margin-right: auto;
-
-
-      xbackground-color:black;
-
-
-
-
-    }
-    .childrenlist .pictureul{
-      width: 1226px;
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      xfont-size: 12px;
-
-    }
-    .childrenlist li{
-      position: relative;
-      float: left;
-      width: 180px;
-      padding: 35px 12px 0;
-      text-align: center;
-      font-size: 12px;
-      list-style: none;
+    .childrenlistbox2{
+      position:fixed;
+      width: 100%;
+      height:0px;
       background-color:white;
-    }
-    .childrenlist li a{
-      text-decoration: none;
-      color:black ;
-    }
-    .childrenlist li a p{
-      color: orange;
-    }
-    .picture{
-      width: 160px;
-      height: 110px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 16px;
-      cursor: pointer;
-      border-right:1px solid #e0e0e0 ;
+      top: 128px;
+      left: 0px;
+      margin: 0;
+      xdisplay: none;
+      z-index: 3;
+      overflow: hidden;
+      xtransition: 5s ;
+      transition: 0.6s;
+      .childrenlist{
+        position: relative;
+        left: 0;
+        width: 1226px;
+        margin-left: auto;
+        margin-right: auto;
+        .pictureul{
+          width: 1226px;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          xfont-size: 12px;
+          >li{
+            position: relative;
+            float: left;
+            width: 180px;
+            padding: 35px 12px 0;
+            text-align: center;
+            font-size: 12px;
+            list-style: none;
+            background-color:white;
+            >a{
+              text-decoration: none;
+              color:black ;
+              >p{
+                color: orange;
+              }
+              .picture{
+                width: 160px;
+                height: 110px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 16px;
+                cursor: pointer;
+                border-right:1px solid #e0e0e0 ;
+                >img{
+                  width: 160px;
+                  height: 110px;
+                }
+              }
+              .title{
+                margin: 0;
+                line-height: 20px;
+                height: auto;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
     }
 
-    .picture img{
-      width: 160px;
-      height: 110px;
-    }
-    .title{
-      margin: 0;
-      line-height: 20px;
-      height: auto;
-      width: auto;
-    }
     .commodity li:hover{
       color: orange;
       cursor: pointer;
     }
     #p1:hover  .childrenlistbox{
-      display: block;
+      height: 228px;
+      transition:height 0.6s;
+      border-top: 0.8px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+
+    }
+    #p2:hover  .childrenlistbox2{
+      height: 228px;
+      transition:height 0.6s;
+      border-top: 0.8px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
 
     }
     .childrenlistbox:hover{
@@ -996,35 +1069,118 @@
       position: fixed;
       right: 0;
       left: auto;
-      bottom: 40px;
+      bottom: 56px;
       background-color: white;
       z-index: 999;
-    }
-    .cbl div a .cblp1{
-      padding-top: 10px;
-      padding-left: 3px;
-      width: 20px;
-      height: 20px;
 
+    }
+
+    .cbl div a .cblp1{
+      padding-left: 26px;
+      padding-top:10px ;
+      margin-right: 26px;
+      width: 30px;
+      height: 30px;
+      display: block;
     }
     .cbl div a .cblp2{
       display: none;
     }
     .cbl div a{
+      position: relative;
       display: block;
-      width: 25px;
-      height: 40px;
+      width: 82px;
+      height: 90px;
+      text-decoration:none;
       border: 1px solid rgb(245,245,245);
+      text-align: center;
+      >span{
+        text-align: center;
+
+        color:black
+      }
+
+    }
+    .cbl div a:hover .sjewm{
+      display: block;
     }
     .cbl div a:hover .cblp1{
       display: none;
     }
     .cbl div a:hover .cblp2{
       padding-top: 10px;
-      padding-left: 3px;
-      width: 20px;
-      height: 20px;
+      padding-left: 26px;
+      margin-right: 26px;
+      width: 30px;
+      height: 30px;
       display: block;
+    }
+    .cbl div a:hover span{
+      color: rgb(255,103,0);
+    }
+    .cbl #hdb::before{
+      content: "";
+      height: 14px;
+      display: block;
+      background-color: rgb(245,245,245);
+    }
+    .cbl div a .sjewm{
+      position: absolute;
+      right: 100px;
+      top:0px;
+      padding: 14px;
+      background-color: #fff;
+      display: none;
+      xborder: 1px solid;
+      >img{
+        width: 100px;
+        height:100px;
+        display:block;
+        margin:6px auto;
+      }
+      >span{
+        color:rgb(117,117,117);
+      }
+    }
+    @media screen and (max-width:1460px){
+        .cbl{
+          left: 50%;
+          right: auto;
+          margin-left: 614px;
+          bottom: 40px;
+          >div a{
+            width: 25px;
+            height: 40px;
+            .cblp1{
+              width: 20px;
+              height: 20px;
+              padding: 0;
+              margin: 0;
+            }
+            .cblp2{
+              width: 20px;
+              height: 20px;
+              padding: 0;
+              margin: 0;
+            }
+            >span{
+              display: none;
+            }
+          }
+
+          >div a:hover{
+            .cblp1,
+            .cblp2{
+              width: 20px;
+              height: 20px;
+              padding: 0;
+              margin: 0;
+            }
+            .sjewm{
+              right:40px ;
+            }
+          }
+        }
     }
     .zjzt{
       position: relative;
@@ -1085,7 +1241,10 @@
             >div:first-child{
               height:628px;
               width:234px;
-
+              &:hover{
+                box-shadow: 0 8px 16px rgba(0,0,0,.18);
+                margin-top: -2px;
+              }
               >a img{
                 height: 628px;
               }
@@ -1094,6 +1253,10 @@
               height: 306px;
               width: 234px;
               background-color: #fff;
+              &:hover{
+                box-shadow: 0 8px 16px rgba(0,0,0,.18);
+                margin-top: -2px;
+              }
               >a{
                 display: block;
                 height:286px;
@@ -1126,12 +1289,12 @@
           }
         }
         .zncdbox{
-          position: relative;
-          width: 1226px;
-          height: 686px;
-          background-color: #fff;
-          top: 155px;
-          .zncdboxtop{
+           position: relative;
+           width: 1226px;
+           height: 686px;
+           xbackground-color: #fff;
+           top: 155px;
+           .zncdboxtop{
             position: relative;
             top:0;
             height:58px;
@@ -1140,19 +1303,269 @@
               float: left;
               color: rgb(51,51,51);
             }
-            >a{
+
+            .zccd:hover{
+              color: orange;
+              transition:0s;
+              .zccdmenu{
+                z-index: 3;
+                transition: 0s;
+              }
+              ~.zcej{
+                color: black;
+              }
+              ~.zcej .zcejmenu{
+                display: none;
+              }
+            }
+            .zccd{
               float: right;
               xtext-decoration: none;
               color: black;
               display: block;
               padding-top: 15px;
               margin-right:20px ;
+              text-decoration: underline;
+              .zccdmenu{
+                width: 977px;
+                height: 628px;
+                background-color:rgb(245,245,245);
+                position:absolute;
+                left:249px;
+                top:62px;
+                xdisplay:none;
+                z-index: 2;
+                transition:1s 999999s;
+                /* z-index: 2; */
+                >div:hover{
+                  box-shadow: 0 8px 16px rgba(0,0,0,.18);
+                  xmargin-top: -2px;
+                }
+                >div{
+                  float: left;
+                  width: 234px;
+                  height: 306px;
+                  background-color: white;
+                  xborder: 1px solid;
+                  margin-right: 10px;
+                  margin-bottom: 10px;
+                  >a{
+                    display: block;
+                    height: 300px;
+                    weight:234px;
+                    text-align:center;
+                    text-decoration:none;
+                    >img{
+                      width: 160px;
+                      height: 160px;
+                      /* margin-left: 37px;
+                      margin-right: auto; */
+                    }
+                    .zccdtitle{
+                      margin: 0;
+                      color: black;
+                    }
+                    .zccddesc{
+                      margin: 0;
+                      color:rgb(176,176,176);
+                    }
+                    .zccdprice{
+                      color:rgb(255,103,0) ;
+                      xmargin: 0;
+                      >del{
+                        color:rgb(176,176,176);
+                      }
+                    }
+                  }
+                }
+                >div:nth-last-child(-n+1){
+                  height:145px;
+                  #tubiao2{
+                    position: absolute;
+                    right:50px;
+                    top:360px;
+                    font-size: 48px;
+                    color:rgb(255,103,0) ;
+                  }
+                  >.more{
+                    font-size: 18px;
+                    margin-top: 45px;
+                    margin-left: 35px;
+                    width: 72px;
+                    color: black;
+                  }
+                  >a img{
+                    position:absolute;
+                    width: 80px;
+                    height:80px;
+                    right:20px;
+                    margin-top:25px;
+                  }
+                  >a h3{
+
+                    color: black;
+                    font-size: 14px;
+                    padding: 20px 110px 5px 30px;
+                    xwidth: 100px;
+                    text-align: left;
+                  }
+                  >a p{
+                    text-align: left;
+                    padding-left: 28px;
+                  }
+
+                }
+               }
             }
-            >a:hover{
+            .zcej:hover{
+              color: orange;
+              transition: 0s;
+              .zcejmenu{
+                z-index: 3;
+                transition:0s;
+              }
+              ~.zccd .zccdmenu{
+                display: none;
+              }
+            }
+            .zcej{
+              float: right;
+              xtext-decoration: none;
+              color:orange;
+              display: block;
+              padding-top: 15px;
+              margin-right:20px ;
+              text-decoration: underline;
+              xdisplay: none;
+
+               .zcejmenu{
+                width: 977px;
+                height: 628px;
+                xbackground-color:red;
+                position:absolute;
+                left:249px;
+                top:62px;
+                xdisplay:none;
+                z-index: 2;
+                transition:1s 9999s;
+                >div:hover{
+                  /* transform: translateY(-2px); */
+                  box-shadow: 0 8px 16px rgba(0,0,0,.18);
+                  xmargin-top: -2px;
+                  /* .tubiao1{
+                    position: absolute;
+                    top:10px;
+                  } */
+                }
+                >div{
+                  float: left;
+                  width: 234px;
+                  height: 306px;
+                  background-color: white;
+                  xborder: 1px solid;
+                  margin-right: 10px;
+                  margin-bottom: 10px;
+                  >a{
+                    display: block;
+                    height: 300px;
+                    weight:234px;
+                    text-align:center;
+                    text-decoration:none;
+                    >img{
+                      width: 160px;
+                      height: 160px;
+                      /* margin-left: 37px;
+                      margin-right: auto; */
+                    }
+                    .zcejtitle{
+                      margin: 0;
+                      color: black;
+                    }
+                    .zcejdesc{
+                      margin: 0;
+                      color:rgb(176,176,176);
+                    }
+                    .zcejprice{
+                      color:rgb(255,103,0) ;
+                      xmargin: 0;
+                      >del{
+                        color:rgb(176,176,176);
+                      }
+                    }
+                  }
+                }
+                >div:nth-last-child(-n+2){
+                  height:145px;
+                  .tubiao1{
+                    position: absolute;
+                    right: 35px;
+                    top: 510px;
+                    width: 48px;
+                    height: 48px;
+                    color: #ff6700;
+                    >span{
+                      font-size: 48px;
+                    }
+                  }
+                  >.more{
+                    xdisplay: inline;
+                    font-size: 18px;
+                    margin-right: 0;
+                    padding-top: 50px;
+                    padding-left: 25px;
+                    xline-height: 50px;
+                    width: 72px;
+                    color: black;
+                  }
+                  >a img{
+                    position:absolute;
+                    width: 80px;
+                    height:80px;
+                    right:20px;
+                    margin-top:25px;
+                  }
+                  >a h3{
+
+                    color: black;
+                    font-size: 14px;
+                    padding: 20px 110px 5px 30px;
+                    xwidth: 100px;
+                    text-align: left;
+                  }
+                  >a p{
+                    text-align: left;
+                    padding-left: 28px;
+                  }
+
+                }
+               }
+            }
+            /* >a:hover{
               color: rgb(255,103,0);
-            }
-          }
-          }
+            } */
+           }
+           /* .zncdboxtop:hover .zccd,
+           .zncdboxtop:hover .zcej{
+            color:black;
+            transition: 0s;
+           } */
+           /* .zncdboxtop:hover .zccd .zccdmenu,
+           .zncdboxtop:hover .zcej .zcejmenu{
+             transition: none;
+
+           } */
+           .zncdcb:hover{
+            box-shadow: 0 8px 16px rgba(0,0,0,.18);
+            xmargin-top: -2px;
+           }
+           .zncdcb{
+           height: 628px;
+           width: 234px;
+             >a img{
+              height: 100%;
+              width:100%;
+             }
+           }
         }
       }
     }
@@ -1249,7 +1662,45 @@
         </div>
        </div>
      </li>
-     <li><span>Redmi手机</span</li>
+     <li id="p2">
+      <span>Redmi手机</span>
+      <div class="childrenlistbox2">
+        <div class="childrenlist">
+          <ul class="pictureul">
+           <li><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c98a369cd511f4bab30e6f4d73438f5d.png?thumb=1&w=100&h=69&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi 13</div>
+             <p>3999元起</p>
+           </a></li>
+           <li><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/11e28a0a7c6a2ca07f0dc2044d3858c2.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi 13 pro</div>
+             <p>4999起</p>
+           </a></li>
+           <li><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/581f3a690e6803add02e4c9fde98cb78.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi MIX Fold 2</div>
+             <p>8999元起</p>
+           </a></li>
+           <li><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4ef3713521fb9d7f114aa8bb152e220d.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi Civi 2</div>
+             <p>2299元起</p>
+           </a></li>
+           <li><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fea69fb5990da9dfc909aa8279aaea7e.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi 11 青春活力版</div>
+             <p>1399元起</p>
+           </a></li>
+           <li ><a href="">
+             <div class="picture"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9c06f92c3216c90a566916e719935018.png?thumb=1&w=200&h=138&f=webp&q=90" alt=""></div>
+             <div class="title">xiaomi 13 限量定制色</div>
+             <p>4999元起</p>
+           </a></li>
+          </ul>
+        </div>
+       </div>
+     </li>
      <li><span>电视</span></li>
      <li><span>笔记本</span></li>
      <li><span>平板</span></li>
@@ -1492,23 +1943,39 @@
   <div><a href="">
     <img class="cblp1" src="https://i8.mifile.cn/b2c-mimall-media/98a23aae70f25798192693f21c4d4039.png" alt="">
     <img class="cblp2" src="https://i8.mifile.cn/b2c-mimall-media/74c4fcb4475af8308e9a670db9c01fdf.png" alt="">
+    <span>手机APP</span>
+    <div class="sjewm">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/78c30d4f259ed43ab20e810a522a6249.png" alt="">
+      <span>扫码领取新人百元礼包</span>
+    </div>
   </a></div>
   <div><a href="">
     <img class="cblp1" src="https://i8.mifile.cn/b2c-mimall-media/55cad219421bee03a801775e7309b920.png" alt="">
     <img class="cblp2" src="https://i8.mifile.cn/b2c-mimall-media/41f858550f42eb1770b97faf219ae215.png" alt="">
+    <span>个人中心</span>
   </a></div>
   <div><a href="">
     <img class="cblp1" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/12eb0965ab33dc8e05870911b90f3f13.png" alt="">
     <img class="cblp2" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/95fbf0081a06eec7be4d35e277faeca0.png" alt="">
+    <span>售后服务</span>
   </a></div>
   <div><a href="">
     <img class="cblp1" src="https://i8.mifile.cn/b2c-mimall-media/4f036ae4d45002b2a6fb6756cedebf02.png" alt="">
     <img class="cblp2" src="https://i8.mifile.cn/b2c-mimall-media/5e9f2b1b0da09ac3b3961378284ef2d4.png" alt="">
+    <span>人工客服</span>
   </a></div>
   <div><a href="">
     <img class="cblp1" src="https://i8.mifile.cn/b2c-mimall-media/d7db56d1d850113f016c95e289e36efa.png" alt="">
     <img class="cblp2" src="https://i8.mifile.cn/b2c-mimall-media/692a6c3b0a93a24f74a29c0f9d68ec71.png" alt="">
+    <span>购物车</span>
   </a></div>
+  <div id="hdb">
+    <a href="" target="_top">
+      <img class="cblp1" src="//i1.mifile.cn/f/i/2018/home/totop.png" alt="">
+      <img class="cblp2" src="//i1.mifile.cn/f/i/2018/home/totop_hover.png" alt="">
+      <span>回顶部</span>
+    </a>
+  </div>
 </div >
 <div class="zjzt">
   <div class="zjztzj">
@@ -1561,13 +2028,13 @@
         </a></div>
         <div><a href="">
           <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aa047170a22d9f0852254aa36df5f5f0.png?thumb=1&w=167&h=167&f=webp&q=90" alt="">
-          <h3 class="title">Xiaomi 13 Pro</h3>
+          <h3 class="sjbmtitle">Xiaomi 13 Pro</h3>
           <p class="sjbmdesc">全新第二代骁龙8｜徕卡专业光学镜头...</p>
           <p class="sjbmprice"><span class="num">4999</span>元<span>起</span><!----></p>
         </a></div>
         <div><a href="">
           <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aa047170a22d9f0852254aa36df5f5f0.png?thumb=1&w=167&h=167&f=webp&q=90" alt="">
-          <h3 class="title">Xiaomi 13 Pro</h3>
+          <h3 class="sjbmtitle">Xiaomi 13 Pro</h3>
           <p class="sjbmdesc">全新第二代骁龙8｜徕卡专业光学镜头...</p>
           <p class="sjbmprice"><span class="num">4999</span>元<span>起</span><!----></p>
         </a></div>
@@ -1576,9 +2043,113 @@
     <div class="zncdbox">
       <div class="zncdboxtop">
         <h3>智能穿戴</h3>
-        <a href="">穿戴</a>
-        <a href="">耳机</a>
+        <span class="zccd">穿戴
+         <div class="zccdmenu">
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202207011906_e7f02b803d3da16ec56a611e790243ba.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zccdtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zccddesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zccdprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202205240036_9a8fbf274c0d419c5a0a49ef67cdd7c8.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zccdtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zccddesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zccdprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202205240036_9a8fbf274c0d419c5a0a49ef67cdd7c8.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zccdtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zccddesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zccdprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202204211417_27356c02de718e88afd3cf36eaba8097.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zccdtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zccddesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zccdprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/11570d5371f16d2d9b19f504e09d01f0.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zccdtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zccddesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zccdprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/11570d5371f16d2d9b19f504e09d01f0.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zccdtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zccddesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zccdprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/11570d5371f16d2d9b19f504e09d01f0.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zccdtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zccddesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zccdprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div>
+            <div class="more">浏览更多<small>穿戴</small></div>
+            <span id="tubiao2" class="iconfont iconfont-circle-arrow-right"></span>
+          </div>
+         </div>
+        </span>
+        <span class="zcej">耳机
+         <div class="zcejmenu">
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202208111200_c1016839eae2c1f5bb79d5afde498e81.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zcejtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zcejdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zcejprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202204211422_ce41ed00fe7fb79df35101222880121d.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zcejtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zcejdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zcejprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0b271a074e087848357aa61ae665b214.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zcejtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zcejdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zcejprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202205241527_fb27e27e6587254da27de5ba9c889512.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zcejtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zcejdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zcejprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/11570d5371f16d2d9b19f504e09d01f0.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zcejtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zcejdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zcejprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/11570d5371f16d2d9b19f504e09d01f0.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zcejtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zcejdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zcejprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/11570d5371f16d2d9b19f504e09d01f0.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+            <h3 class="zcejtitle">Xiaomi Buds 4 Pro</h3>
+            <p class="zcejdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+            <p class="zcejprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+          </a></div>
+          <div><a href="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202209261427_67cd5fddb341f0e0fb0a2295e643b0d8.png?thumb=1&w=63&h=63&f=webp&q=90" alt="">
+            <h3 class="zcrjtitle">Xiaomi降噪蓝牙耳机Necklace</h3>
+            <p class="zcejprice"><span class="num">399</span>元<!----></p>
+          </a></div>
+          <div>
+            <div class="more">浏览更多<small>耳机</small></div>
+            <div class="tubiao1"><span class="iconfont iconfont-circle-arrow-right"></span></div>
+          </div>
+        </div>
+        </span>
       </div>
+      <div class="zncdcb"><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c9550c95ee33a22dc8db677dada00f09.jpg?thumb=1&w=146&h=384&f=webp&q=90" alt=""></a></div>
     </div>
   </div>
 </div>
