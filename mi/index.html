@@ -1124,6 +1124,9 @@
       display: block;
       background-color: rgb(245,245,245);
     }
+    .cbl div a .cblmin{
+      display: none;
+    }
     .cbl div a .sjewm{
       position: absolute;
       right: 100px;
@@ -1178,6 +1181,17 @@
             }
             .sjewm{
               right:40px ;
+            }
+            .cblmin{
+              display: block;
+              position: absolute;
+              right: 40px;
+              top: 0;
+              color: black;
+              white-space: nowrap;
+              height: 28px;
+              line-height: 28px;
+              background-color: #fff;
             }
           }
         }
@@ -1567,6 +1581,132 @@
              }
            }
         }
+        .jdbox{
+          position: relative;
+          height: 686px;
+          width: 1226px;
+          xbackground-color: red;
+          top: 145px;
+          .jdcb{
+            height: 628px;
+            width:234px;
+            display:flex;
+            flex-flow:column;
+            gap:15px;
+            > a{
+              display:block;
+              height: 306px;
+              width:234px;
+              > img{
+                height: 306px;
+                width: 234px;
+              }
+            }
+          }
+          .jdboxtop{
+            height:58px ;
+            width:1226px;
+            display: flex;
+            gap:10px;
+            >h3{
+              font-size: 22px;
+              color:rgb(51,51,51);
+              flex-grow: 1;
+            }
+            .jdrm{
+             font-size: 16px;
+             display: inline-block;
+             height: 58px;
+             line-height: 58px;
+             text-decoration: underline;
+             cursor: pointer;
+             position: relative;
+             .jdrmmenu{
+               width: 978px;
+               height:628px;
+               position:absolute;
+               left: -873px;
+               xbackground-color: red;
+               display: grid;
+               grid-template-rows:repeat(4 ,1fr);
+               grid-template-columns:repeat(4 ,1fr);
+               gap:15px;
+               >div{
+                grid-row: span 2;
+                background-color: #fff;
+                >a{
+                  text-align:center;
+                  text-decoration:none;
+                  >img{
+                    display: block;
+                    width: 160px;
+                    height:160px;
+                    margin: auto;
+                  }
+                  .jdrmtitle{
+                    color: #333;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 14px;
+                    line-height: 14px;
+                  }
+                  .jdrmdesc{
+                    margin: 0;
+                    padding: 0;
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: #b0b0b0;
+                  }
+                  .jdrmprice{
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: #ff6700;
+                    >del{
+                      color: #b0b0b0;
+                    }
+                  }
+                }
+               }
+               >div:nth-last-child(-n+2){
+                grid-row: span 1;
+                > a{
+                  text-decoration: none;
+                  width:234px;
+                  height:68px;
+                  display:block;
+                  text-align:left;
+                  xmargin-top:38px;
+                  >img{
+                    width: 80px;
+                    height: 80px;
+                    display:block;
+                    xfloat: right;
+                    margin-right: 0;
+                    xmargin-top: 10px;
+                  }
+                  .jdrmprice{
+                    xdisplay: inline-block;
+                    xfloat: left;
+                  }
+                  .jdrmtitle{
+                    xdisplay: inline-block;
+                    xfloat:left
+                  }
+                }
+               }
+             }
+            }
+            .jddsyy{
+             position: relative;
+             font-size: 16px;
+             display: inline-block;
+             height: 58px;
+             line-height: 58px;
+             text-decoration: underline;
+             cursor: pointer;
+            }
+          }
+        }
       }
     }
   </style>
@@ -1953,27 +2093,32 @@
     <img class="cblp1" src="https://i8.mifile.cn/b2c-mimall-media/55cad219421bee03a801775e7309b920.png" alt="">
     <img class="cblp2" src="https://i8.mifile.cn/b2c-mimall-media/41f858550f42eb1770b97faf219ae215.png" alt="">
     <span>个人中心</span>
+    <span class="cblmin">个人中心</span>
   </a></div>
   <div><a href="">
     <img class="cblp1" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/12eb0965ab33dc8e05870911b90f3f13.png" alt="">
     <img class="cblp2" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/95fbf0081a06eec7be4d35e277faeca0.png" alt="">
     <span>售后服务</span>
+    <span class="cblmin">售后服务</span>
   </a></div>
   <div><a href="">
     <img class="cblp1" src="https://i8.mifile.cn/b2c-mimall-media/4f036ae4d45002b2a6fb6756cedebf02.png" alt="">
     <img class="cblp2" src="https://i8.mifile.cn/b2c-mimall-media/5e9f2b1b0da09ac3b3961378284ef2d4.png" alt="">
     <span>人工客服</span>
+    <span class="cblmin">人工客服</span>
   </a></div>
   <div><a href="">
     <img class="cblp1" src="https://i8.mifile.cn/b2c-mimall-media/d7db56d1d850113f016c95e289e36efa.png" alt="">
     <img class="cblp2" src="https://i8.mifile.cn/b2c-mimall-media/692a6c3b0a93a24f74a29c0f9d68ec71.png" alt="">
     <span>购物车</span>
+    <span class="cblmin">购物车（0）</span>
   </a></div>
   <div id="hdb">
     <a href="" target="_top">
       <img class="cblp1" src="//i1.mifile.cn/f/i/2018/home/totop.png" alt="">
       <img class="cblp2" src="//i1.mifile.cn/f/i/2018/home/totop_hover.png" alt="">
       <span>回顶部</span>
+      <span class="cblmin">回顶部</span>
     </a>
   </div>
 </div >
@@ -2150,6 +2295,73 @@
         </span>
       </div>
       <div class="zncdcb"><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c9550c95ee33a22dc8db677dada00f09.jpg?thumb=1&w=146&h=384&f=webp&q=90" alt=""></a></div>
+    </div>
+    <div class="jdbox">
+      <div class="jdboxtop">
+        <h3>家电</h3>
+        <span class="jdrm">热门
+          <div class="jdrmmenu">
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82ff5ea76730fdf6f91aba5d3b2e5739.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c7c15101f2c8a652a4a0d069501d1e53.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/388b13bf52ab0d6a56bc9f195b5f1dd5.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/21429638bdd453e8c1cb5c357ff4835b.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9cd8a5a447b4f84faeb3791811a179f9.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9cd8a5a447b4f84faeb3791811a179f9.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9cd8a5a447b4f84faeb3791811a179f9.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <h3 class="jdrmtitle">米家波轮洗衣机 10kg</h3>
+              <p class="jdrmprice"><span class="num">999</span>元<!----></p>
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9cd8a5a447b4f84faeb3791811a179f9.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+
+            </a></div>
+            <div><a href="">
+
+            </a></div>
+          </div>
+        </span>
+        <span class="jddsyy">电视影音
+          <div class="jddsyymenu"></div>
+        </span>
+      </div>
+      <div class="jdcb">
+        <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3d47879ec183e25a36e67e0219636e60.jpg?thumb=1&w=146&h=188&f=webp&q=90" alt=""></a>
+        <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/65e186001431a799d30fa84359f4b84e.jpg?thumb=1&w=146&h=188&f=webp&q=90" alt=""></a>
+      </div>
     </div>
   </div>
 </div>
