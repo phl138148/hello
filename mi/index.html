@@ -1199,7 +1199,7 @@
     .zjzt{
       position: relative;
       top: 550px;
-      height: 5872px;
+      height: 2395px;
       width:100%;
       xbackground-color: aqua;
       background-color: rgb(245,245,245);
@@ -1308,6 +1308,11 @@
            height: 686px;
            xbackground-color: #fff;
            top: 155px;
+           .zncdboxtop:hover{
+            .zcej{
+              transition: 0s;
+            }
+           }
            .zncdboxtop{
             position: relative;
             top:0;
@@ -1316,6 +1321,10 @@
             >h3{
               float: left;
               color: rgb(51,51,51);
+            }
+            .zccd:has(~:hover){
+              color: black;
+              transition: none;
             }
 
             .zccd:hover{
@@ -1340,6 +1349,7 @@
               padding-top: 15px;
               margin-right:20px ;
               text-decoration: underline;
+              transition: 1s 99999s;
               .zccdmenu{
                 width: 977px;
                 height: 628px;
@@ -1431,6 +1441,10 @@
                 }
                }
             }
+            .zccd:hover ~ .zcej{
+              color:black;
+              transition: none;
+            }
             .zcej:hover{
               color: orange;
               transition: 0s;
@@ -1442,6 +1456,7 @@
                 display: none;
               }
             }
+
             .zcej{
               float: right;
               xtext-decoration: none;
@@ -1451,7 +1466,7 @@
               margin-right:20px ;
               text-decoration: underline;
               xdisplay: none;
-
+              transition: 1s 99999s;
                .zcejmenu{
                 width: 977px;
                 height: 628px;
@@ -1608,10 +1623,20 @@
             width:1226px;
             display: flex;
             gap:10px;
+            &:hover{
+
+              .jdrm{
+                transition: 0s;
+              }
+            }
             >h3{
               font-size: 22px;
               color:rgb(51,51,51);
               flex-grow: 1;
+            }
+            .jdrm:has(~:hover){
+              color: black;
+              transition: none;
             }
             .jdrm{
              font-size: 16px;
@@ -1621,6 +1646,21 @@
              text-decoration: underline;
              cursor: pointer;
              position: relative;
+             color: #ff6700;
+             transition: 1s 99999s;
+             &:hover{
+              color: #ff6700;
+              transition:0s;
+              .jdrmmenu{
+                z-index: 3;
+                transition:0s;
+                xdisplay: grid;
+              }
+
+              ~.jddsyy .jddsyymenu{
+                display: none;
+              }
+             }
              .jdrmmenu{
                width: 978px;
                height:628px;
@@ -1631,9 +1671,16 @@
                grid-template-rows:repeat(4 ,1fr);
                grid-template-columns:repeat(4 ,1fr);
                gap:15px;
+               z-index: 2;
+               xdisplay:none;
+               transition: 1s 99999s;
                >div{
                 grid-row: span 2;
                 background-color: #fff;
+                &:hover{
+                  transform: translatey(-2px);
+                  box-shadow: 0 8px 16px rgba(0,0,0,.18);
+                }
                 >a{
                   text-align:center;
                   text-decoration:none;
@@ -1672,29 +1719,50 @@
                 > a{
                   text-decoration: none;
                   width:234px;
-                  height:68px;
+                  height:100%;
                   display:block;
                   text-align:left;
-                  xmargin-top:38px;
+                  xpadding-top:38px;
+                  xpadding-left:10px;
                   >img{
+                    position: relative;
                     width: 80px;
                     height: 80px;
+                    top: 36px;
                     display:block;
-                    xfloat: right;
-                    margin-right: 0;
-                    xmargin-top: 10px;
-                  }
-                  .jdrmprice{
-                    xdisplay: inline-block;
-                    xfloat: left;
+                    left: 148px;
+                    margin: 0;
                   }
                   .jdrmtitle{
-                    xdisplay: inline-block;
-                    xfloat:left
+                   transform: translateY(-15px);
+                  }
+                  .jdrmprice{
+                    margin: 0;
+                  }
+                  .more{
+                    font-size: 18px;
+                    color: black;
+                    width: 72px;
+                    margin: 0;
+                    float: left;
+                    height: 50px;
+                    display: flow-root;
+                  }
+                  >span{
+                    font-size: 48px;
+                    color: #ff6700;
+                    position: relative;
+                    left: 80px;
+                    top:35px;
                   }
                 }
                }
              }
+            }
+            .jdrm:hover + .jddsyy{
+              color: black;
+              transition: none;
+
             }
             .jddsyy{
              position: relative;
@@ -1704,6 +1772,208 @@
              line-height: 58px;
              text-decoration: underline;
              cursor: pointer;
+             color: black;
+             transition:1s 9999s;
+             &:hover{
+              color: #ff6700;
+              transition:0s;
+              .jddsyymenu{
+                z-index: 4;
+                transition:0s;
+                xdisplay: grid;
+              }
+
+             }
+             .jddsyymenu{
+               width: 978px;
+               height:628px;
+               position:absolute;
+               left: -913px;
+               xbackground-color: red;
+               display: grid;
+               grid-template-rows:repeat(4 ,1fr);
+               grid-template-columns:repeat(4 ,1fr);
+               gap:15px;
+               z-index: 1;
+               xdisplay:none;
+               transition:1s 99999s;
+               background-color: rgb(245,245,245);
+               >div{
+                grid-row: span 2;
+                background-color: #fff;
+                &:hover{
+                  transform: translatey(-2px);
+                  box-shadow: 0 8px 16px rgba(0,0,0,.18);
+                }
+                >a{
+                  text-align:center;
+                  text-decoration:none;
+                  >img{
+                    display: block;
+                    width: 160px;
+                    height:160px;
+                    margin: auto;
+                  }
+                  .jdrmtitle{
+                    color: #333;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 14px;
+                    line-height: 14px;
+                  }
+                  .jdrmdesc{
+                    margin: 0;
+                    padding: 0;
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: #b0b0b0;
+                  }
+                  .jdrmprice{
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: #ff6700;
+                    >del{
+                      color: #b0b0b0;
+                    }
+                  }
+                }
+               }
+               >div:nth-last-child(-n+1){
+                grid-row: span 1;
+                > a{
+                  text-decoration: none;
+                  width:234px;
+                  height:100%;
+                  display:block;
+                  text-align:left;
+                  xpadding-top:38px;
+                  xpadding-left:10px;
+                  >img{
+                    position: relative;
+                    width: 80px;
+                    height: 80px;
+                    top: 36px;
+                    display:block;
+                    left: 148px;
+                    margin: 0;
+                  }
+                  .jdrmtitle{
+                   transform: translateY(-15px);
+                  }
+                  .jdrmprice{
+                    margin: 0;
+                  }
+                  .more{
+                    font-size: 18px;
+                    color: black;
+                    width: 72px;
+                    margin: 0;
+                    float: left;
+                    height: 50px;
+                    display: flow-root;
+                  }
+                  >span{
+                    font-size: 48px;
+                    color: #ff6700;
+                    position: relative;
+                    left: 80px;
+                    top:35px;
+                  }
+                }
+               }
+             }
+            }
+          }
+        }
+        .home-banner-box{
+          width: 1226px;
+          height: 120px;
+          position: relative;
+          top:174px;
+          >a img{
+            width:100%;
+            height:100%
+          }
+        }
+      }
+    }
+    .ztxm{
+      width:100%;
+      height: 740px;
+      background-color: red;
+      position: relative;
+      top: 550px;
+      .ztxmsm{
+        width: 100%;
+        height:474px;
+        background-color: rgb(255,255,255);
+        position: relative;
+        .ztxmsmzj{
+          width: 1226px;
+          height: 100%;
+          xbackground-color: blue;
+          margin: auto;
+          .xmsmzjtop{
+            width: 100%;
+            height:81px;
+            border-bottom:1px solid rgb(224,224,224);
+            >ul{
+              padding: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              >li{
+                list-style: none;
+                font-size:16px;
+                text-align:center;
+                line-height:25px;
+                border-left:1px solid rgb(224,224,224);
+                &:nth-child(1){
+                  border-left: 0;
+                }
+                >a{
+                  text-decoration: none;
+                  color: rgb(97,97,97);
+                  text-align:center;
+                  margin-left:65px ;
+                  &:hover{
+                    color: #ff6700;
+                  }
+                }
+              }
+            }
+          }
+          .xmsmzjxm{
+            width: 1226px;
+            height: 393px;
+            xbackground-color: blue;
+            position: absolute;
+            bottom:0px;
+            display: flex;
+            justify-content: space-between;
+            >dl{
+              >dt{
+                margin: 20px 0;
+              }
+              >dd{
+                margin: 10px 0 0;
+                font-size:12px;
+                >a{
+                  text-decoration: none;
+                  color: black;
+                  &:hover{
+                    color: #ff6700;
+                  }
+                }
+              }
+              &:first-child{
+                width: 176px;
+              }
+            }
+            >div{
+
             }
           }
         }
@@ -2238,6 +2508,7 @@
           </div>
          </div>
         </span>
+
         <span class="zcej">耳机
          <div class="zcejmenu">
           <div><a href="">
@@ -2344,18 +2615,59 @@
                <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
             </a></div>
             <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9cd8a5a447b4f84faeb3791811a179f9.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
               <h3 class="jdrmtitle">米家波轮洗衣机 10kg</h3>
               <p class="jdrmprice"><span class="num">999</span>元<!----></p>
-              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9cd8a5a447b4f84faeb3791811a179f9.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
-
             </a></div>
             <div><a href="">
-
+              <div class="more">浏览更多<small>热门</small></div>
+              <span class="iconfont iconfont-circle-arrow-right"></span>
             </a></div>
           </div>
         </span>
         <span class="jddsyy">电视影音
-          <div class="jddsyymenu"></div>
+          <div class="jddsyymenu">
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82ff5ea76730fdf6f91aba5d3b2e5739.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c7c15101f2c8a652a4a0d069501d1e53.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/388b13bf52ab0d6a56bc9f195b5f1dd5.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/21429638bdd453e8c1cb5c357ff4835b.png?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9cd8a5a447b4f84faeb3791811a179f9.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9cd8a5a447b4f84faeb3791811a179f9.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="">
+               <h3 class="jdrmtitle">Xiaomi Buds 4 Pro</h3>
+               <p class="jdrmdesc">48dB智能动态降噪｜骨声纹通话降噪 | 独立空间音频</p>
+               <p class="jdrmprice"><span class="num">949</span>元<!----><del><span class="num">1099</span>元</del></p>
+            </a></div>
+            <div><a href="">
+              <div class="more">浏览更多<small>电视影音</small></div>
+              <span class="iconfont iconfont-circle-arrow-right"></span>
+            </a></div>
+          </div>
         </span>
       </div>
       <div class="jdcb">
@@ -2363,7 +2675,80 @@
         <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/65e186001431a799d30fa84359f4b84e.jpg?thumb=1&w=146&h=188&f=webp&q=90" alt=""></a>
       </div>
     </div>
+    <div class="home-banner-box">
+      <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/88e35cffc82cd98cd53172460067af17.jpg?thumb=1&w=766&h=75&f=webp&q=90" alt=""></a>
+    </div>
   </div>
+</div>
+<div class="ztxm">
+  <div class="ztxmsm">
+    <div class="ztxmsmzj">
+      <div class="xmsmzjtop">
+        <ul class="">
+          <li><a rel="" href="" ><em class="iconfont-tool"></em>预约维修服务</a></li>
+          <li><a rel="" href="" ><em class="iconfont-circle-7"></em>7天无理由退货</a></li>
+          <li><a rel="" href="" ><em class="iconfont-circle-15"></em>15天免费换货</a></li>
+          <li><a rel="" href="" ><em class="iconfont-gift"></em><span id="J_footerPrice">满69元包邮</span></a></li>
+          <li><a rel="" href="" ><em class="iconfont-location"></em>1100余家售后网点</a></li>
+        </ul>
+      </div>
+      <div class="xmsmzjxm">
+        <dl class="col-links"><dt></dt></dl>
+        <dl class="col-links">
+          <dt>选购指南</dt>
+          <dd><a rel="" href="">手机</a></dd>
+          <dd><a rel="" href="">电视</a></dd>
+          <dd><a rel="" href="">笔记本</a></dd>
+          <dd><a rel="" href="">平板</a></dd>
+          <dd><a rel="" href="">穿戴</a></dd>
+          <dd><a rel="" href="">耳机</a></dd>
+          <dd><a rel="" href="">家电</a></dd>
+          <dd><a rel="" href="">路由器</a></dd>
+          <dd><a rel="" href="">音箱</a></dd>
+          <dd><a rel="" href="">配件</a></dd>
+        </dl>
+        <dl class="col-links">
+          <dt>服务中心</dt>
+          <dd><a rel="" href="">申请售后</a></dd>
+          <dd><a rel="" href="" >售后政策</a></dd>
+          <dd><a rel="" href="" >维修服务价格</a></dd>
+          <dd><a rel="" href="" >订单查询</a></dd>
+          <dd><a rel="" href="" >以旧换新</a></dd>
+          <dd><a rel="" href="" >保障服务</a></dd>
+          <dd><a rel="" href="" >防伪查询</a></dd>
+          <dd><a rel="" href="" >F码通道</a></dd>
+        </dl>
+        <dl class="col-links">
+          <dt>线下门店</dt>
+          <dd><a rel="" href="" >小米之家</a></dd>
+          <dd><a rel="" href="" >服务网点</a></dd>
+          <dd><a rel="" href="" >授权体验店/专区</a></dd>
+        </dl>
+        <dl class="col-links">
+          <dt>关于小米</dt>
+          <dd><a rel="" href="">了解小米</a></dd>
+          <dd><a rel="" href="" >加入小米</a></dd>
+          <dd><a rel="" href="" >投资者关系</a></dd>
+          <dd><a rel="" href="" >环境，社会及管治</a></dd>
+          <dd><a rel="" href="" >廉洁举报</a></dd>
+        </dl>
+        <dl class="col-links">
+          <dt>关注我们</dt>
+          <dd><a rel="" href="" >新浪微博</a></dd>
+          <dd><a rel="" href="" >官方微信</a></dd>
+          <dd><a rel="" href="" >联系我们</a></dd>
+          <dd><a rel="" href="" >公益基金会</a></dd>
+        </dl>
+        <div class="col-contact">
+          <p class="phone">400-100-5678</p>
+          <p>8:00-18:00（仅收市话费）</p>
+          <a rel="" class="btn btn-line-primary btn-small J_contactBtn">
+            <em class="iconfont-message2"></em>
+            人工客服 </a>
+        </div>
+    </div>
+  </div>
+  <div class="ztxmxm"></div>
 </div>
 </body>
 </html>
