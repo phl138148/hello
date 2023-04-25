@@ -1,0 +1,154 @@
+<script id="ch0103/01" type="">
+var A = +prompt('A')
+var B = +prompt('B')
+var C = A + B
+console.log(C)
+</script>
+
+<script id="ch0103/02" type="">
+var a = +prompt('a')
+var b = +prompt('b')
+var c = +prompt('c')
+var d = (a + b) * c
+console.log(d)
+</script>
+
+<script id="ch0103/03" type="">
+ var a = +prompt('a')
+ var b = +prompt('b')
+ var c = +prompt('c')
+ var d = (a + b)/c
+ console.log(d)
+</script>
+
+<script id="ch0103/04" type="">
+ var a = +prompt('被除数') , b = +prompt('除数')
+
+ var c = Math.floor(a / b) , d =a % b
+ console.log(c,d)
+</script>
+
+<script id="ch0103/05" type="">
+  var a = +prompt('分子'), b = +prompt('分母')
+  var c = (a / b).toFixed(9)
+  console.log(c)
+</script>
+
+<script id="ch0103/06" type="">
+  var a = +prompt('确诊数')
+  var b = +prompt('死亡数')
+  var c = ((b / a).toFixed(5)) * 100
+  console.log(c + "%")
+</script>
+
+<script id="ch0103/07" type="">
+ var x = +prompt('x')
+ var a = +prompt('a')
+ var b = +prompt('b')
+ var c = +prompt('c')
+ var d = +prompt('d')
+ var y = a * Math.pow(x,3) + b * Math.pow(x,2) + c * x + d
+ console.log(y)
+</script>
+
+<script id="ch0103/08" type="">
+  var f = +prompt('华氏温度')
+  var c = (5 * (f - 32) / 9).toFixed(5)
+  console.log(c)
+</script>
+
+<script id="ch0103/09" type="">
+  var r = +prompt('半径')
+  var pi = 3.14159
+  var d = (r * 2).toFixed(4)
+  var zc = (2 * pi * r).toFixed(4)
+  var mj = (pi * Math.pow(r,2)).toFixed(4)
+  console.log(d,zc,mj)
+</script>
+<script id="ch0103/10" type="">
+  var r1 = +prompt('r1')
+  var r2 = +prompt('r2')
+  var R = (1/(1 / r1 + 1 / r2)).toFixed(2)
+  console.log(R)
+</script>
+<script id="ch0103/11" type="">
+  var a = +prompt('a')
+  var b = +prompt('b')
+  // var k = Math.floor(a / b)
+  // var r = a - (k * b)
+  var r = (a % b)
+  console.log(r)
+</script>
+
+<script id="ch0103/12" type="">
+  var r = +prompt('r')
+  var pi = 3.14
+  var V = ((4 * pi * Math.pow(r , 3))/3).toFixed(2)
+  console.log(V)
+</script>
+
+<script id="ch0103/13" type="">
+  var n = +prompt('n')
+  var g = n % 10
+  var s = (n % 100 - g) / 10
+  var b = (n - (n % 100 )) / 100
+  console.log(g+''+s+''+b+'')
+</script>
+
+<script id="ch0103/14" type="">
+  var h = +prompt('h')
+  var r = +prompt('r')
+  var pi = 3.14159
+  var tj = (pi * r * r * h) / 1000
+  var xh = Math.ceil(20 / tj)
+  console.log(xh)
+</script>
+
+<script id="ch0103/15" type="">
+  var n = +prompt('n')
+  var x = +prompt('x')
+  var y = +prompt('y')
+  var sx = Math.floor (n - (y / x))
+  console.log(sx)
+</script>
+
+<script id="ch0103/16" type="">
+  var Xa = +prompt('Xa')
+  var Ya = +prompt('Ya')
+  var Xb = +prompt('Xb')
+  var Yb = +prompt('Yb')
+  var cd = (Math.sqrt((Yb - Ya)**2+(Xb - Xa)**2)).toFixed(3)
+  console.log(cd)
+</script>
+
+<script id="ch0103/17" type="">
+  var x1 = +prompt('x1')
+  var y1 = +prompt('y1')
+  var x2 = +prompt('x2')
+  var y2 = +prompt('y2')
+  var x3 = +prompt('x3')
+  var y3 = +prompt('y3')
+  var mj = ((x1 * y2 - x1 * y3 + x2 * y3 - x2 * y1 + x3 * y1 - x2 * y2)/2).toFixed(2)
+  console.log(mj)
+</script>
+
+<script id="ch0103/18" type="">
+  var a1 = +prompt('a1')
+  var a2 = +prompt('a2')
+  var n = +prompt('n')
+  var an = a1 + ((a2 - a1) * (n - 1))
+  console.log(an)
+</script>
+
+<script id="ch0103/19" type="">
+  var a = +prompt('a')
+  var b = +prompt('b')
+  var ji = a * b
+  console.log(ji)
+</script>
+
+<script id="ch0103/20" type="">
+  var n = +prompt('n')
+  var mi = Math.pow(2,n)
+  console.log(mi)
+</script>
