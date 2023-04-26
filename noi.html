@@ -150,3 +150,181 @@ console.log(d)
   var mi = Math.pow(2,n)
   console.log(mi)
 </script>
+
+<script id="ch0104/01" >
+var n = +prompt('N')
+console.log(n > 0 ? 'positive' :(n < 0 ? 'negative' : 'zero'))
+</script>
+
+<script id="ch0104/02">
+  var x = +prompt('x')
+  console.log((x > 0 ? x :(x < 0 ? -x : 0)).toFixed(2))
+</script>
+
+<script id="ch0104/03">
+  var x = +prompt('x')
+  console.log((x % 2 ===0) ? "even" : "odd")
+</script>
+
+<script id="ch0104/04">
+  var a = prompt("a")
+  var b = a.charCodeAt()
+  if (b % 2 === 0)
+    var c = 'NO'
+  else
+    var c = 'YES'
+    console.log(c)
+</script>
+
+<script id="ch0104/05">
+  var x = +prompt('x')
+  var y = +prompt('y')
+  console.log((x > y) ? '>' : ((x < y) ? '<' : '='))
+</script>
+
+<script id="ch0104/06">
+  var x = +prompt('x')
+  console.log((x >= 10 && x <=99) ? 1 : 0)
+</script>
+
+<script id="ch0104/07">
+  var x = +prompt('幸运')
+  var y = +prompt('鼓励')
+  console.log((x >=10 || y >=20) ? 1 : 0)
+</script>
+
+<script id="ch0104/08">
+  var n = +prompt('n')
+  console.log((n % 3 ===0 && n % 5 ===0) ? 'YES' : 'NO')
+</script>
+
+<script id="ch0104/09">
+  var x = +prompt('x')
+  console.log((x % 3 ===0 && x % 5 ===0 && x % 7 ===0) ? '3 5 7' :((x%3===0 && x%5===0) ? '3 5' :((x%3===0 && x%7===0) ? '3 7' : ((x%5===0 && x%7===0) ? '5 7' :((x%3===0) ? 3 :((x%5===0) ? '5' :((x%7===0) ? '7' : 'n' )))))))
+</script>
+
+<script id="ch0104/10">
+  var x = +prompt('语文成绩')
+  var y = +prompt('数学成绩')
+  console.log((x < 60 || y < 60) ? 1 : 0)
+</script>
+
+<script id="ch0104/11">
+  var x = +prompt('看展日期')
+  console.log((x % 7 == 1 || x % 7 == 3 || x % 7 == 5) ? 'NO' : 'YES')
+</script>
+
+<script id="ch0104/12">
+  var x = +prompt('距离')
+  var a = (x / 3) + 50
+  var b = x / 1.2
+  console.log(a > b ? 'Walk' :((a < b) ? 'Bike' : 'All'))
+</script>
+
+<script id="ch0104/13">
+  var n = +prompt('N')
+  if (n >= 0 && n < 5)
+    var y = (- n + 2.5).toFixed(3)
+  else if (n >=5 && n < 10)
+    var y = (2 - (1.5 * Math.pow((x - 3),2))).toFixed(3)
+  else if(n >= 10 && n < 20)
+    var y = ((x / 2) - 1.5).toFixed(3)
+    console.log(y)
+</script>
+
+<script id="ch0104/14">
+  var x = +prompt('重量')
+  var y = prompt('是否加急')
+  if ((x <= 1000) && (y == 'y'))
+    var z = 13
+  else if ((x <= 1000) && (y == 'n'))
+    var z = 8
+  else if ((x > 1000) && (y == 'y'))
+    var z = 13 + 4 * (Math.ceil((x - 1000) / 500))
+  else if ((x > 1000) && (y == 'n'))
+    var z= 8 + 4 * (Math.ceil((x - 1000) / 500))
+    console.log(z)
+</script>
+
+<script id="ch0104/15">
+  var x = +prompt('x')
+  var y = +prompt('y')
+  var z = +prompt('z')
+  if (x >= y && x >= z)
+    var a = x
+  else if (y >= x && y >= z)
+    var a = y
+  else if (z >= x && z >= y)
+    var a = z
+    console.log(a)
+</script>
+
+<script id="ch0104/16">
+  var a = +prompt('a')
+  var b = +prompt('b')
+  var c = +prompt('c')
+  if (a + b > c && a + c > b && b + c > a)
+    var d = 'yes'
+  else
+    var d = 'no'
+    console.log(d)
+</script>
+
+<script id="ch0104/17">
+  var a = +prompt('a')
+  if ((a % 4 ===0 && a % 100 !=0) || (a % 400 ===0))
+    var b = 'Y'
+  else
+    var b = 'N'
+    console.log(b)
+</script>
+
+<script id="ch0104/18">
+  var x = +prompt('x')
+  var y = +prompt('y')
+  if ((x <= 1 && x >= -1) && (y <= 1 && y >= -1))
+    var a = 'yes'
+  else
+    var a = 'no'
+    console.log(a)
+</script>
+
+<script id="ch0104/19">
+  var a = +prompt('a')
+  var b = +prompt('b')
+  var c = prompt('操作符')
+  if (c == '+')
+   var d = a + b
+  else if (c == '-')
+   var d = a - b
+  else if (c == '*' )
+   var d = a * b
+  else if (c == '/' && (a === 0 || b === 0))
+   var d = 'Divided by zero!'
+  else if (c == '/')
+   var d = a / b
+  else
+   var d = 'Invalid operator!'
+   console.log(d)
+</script>
+
+<script id="ch0104/20">
+  var a = +prompt('a')
+  var b = +prompt('b')
+  var c = +prompt('c')
+  if ((b * b) - (4 * a * c) == 0)
+   var d = 'x1=x2=' + ((-b)/(2 * a))
+  else if ((b*b)-(4*a*c)>0)
+   var d = 'x1=' + ((-b + Math.sqrt((b*b)-(4*a*c)))/(2 * a)).toFixed(5) + ';' + 'x2=' + ((-b - Math.sqrt((b*b)-(4*a*c)))/(2 * a)).toFixed(5)
+  else
+   var d = 'x1=' + (-b /(2 * a)).toFixed(5) + '+' + (Math.sqrt((4*a*c)-(b*b))/(2 * a)).toFixed(5) + 'i' + ';' + 'x2=' + (-b /(2 * a)).toFixed(5) + '-' + ((Math.sqrt((4*a*c)-(b*b))) / (2 *a)).toFixed(5) + 'i'
+   console.log(d)
+</script>
+
+<script id="ch0104/21">
+  var n = +prompt('n')
+  var x = +prompt('x')
+  var y = +prompt('y')
+  var s = n - Math.ceil(y / x)
+  console.log(s)
+</script>
