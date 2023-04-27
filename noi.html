@@ -328,3 +328,314 @@ console.log(n > 0 ? 'positive' :(n < 0 ? 'negative' : 'zero'))
   var s = n - Math.ceil(y / x)
   console.log(s)
 </script>
+
+<script id="ch0105/01">
+  var n = +prompt('人数')
+  var number = 1
+  var sum = 0
+  while (number <= n){
+    number++
+    var x = +prompt('x')
+    sum += x
+  }
+  console.log((sum / n).toFixed(2))
+</script>
+
+<script id="ch0105/02">
+  var n = 1
+  var sum = 0
+  while(n <= 12){
+    n++
+    var x = +prompt('结余')
+    sum += x
+  }
+  console.log('$' + (sum/12).toFixed(2))
+</script>
+
+<script id="ch0105/03">
+  var n = +prompt('样本容量')
+  var number = 1
+  var sum = 0
+  while(number <= n){
+    number++
+    var x = +prompt('x')
+    sum += x
+  }
+  console.log((sum / n).toFixed(4))
+</script>
+
+<script id="ch0105/04">
+  var n = +prompt('个数')
+  var number = 1
+  var sum = 0
+  while(number <= n){
+    number++
+    var x = +prompt('x')
+    sum += x
+  }
+  console.log(sum , (sum/n).toFixed(5))
+</script>
+
+<script id="ch0105/05">
+  var n = +prompt('人数')
+  var max = 0
+  for (var number = 0;number < n;number = number + 1){
+    var x = +prompt('x')
+    if (max < x){
+      max = x
+    }
+  }
+  console.log(max)
+</script>
+
+<script id="ch0105/06">
+  var n = +prompt('个数')
+  var max = 0
+  var min = 1001
+  for(var number = 0;number < n;number++){
+    var x = +prompt('x')
+    if (max < x){
+      max = x
+    }
+    if (min > x){
+      min = x
+    }
+  }
+  console.log(max - min)
+</script>
+
+<script id="ch0105/07">
+  var n = +prompt('n')
+  var sumj = 0
+  var sumy = 0
+  var sumt = 0
+
+  for(var number = 0;number < n;number++){
+    var j = +prompt('j')
+    var y = +prompt('y')
+    var t = +prompt('t')
+    sumj += j
+    sumy += y
+    sumt += t
+  }
+  console.log(sumj,sumy,sumt,(sumj + sumy + sumt))
+</script>
+
+<script id="ch0105/08">
+  var n = +prompt('n')
+  var sum = 0
+  for(var number = 0;number < (n - 1);number++){
+    var j = +prompt('角度')
+    sum += j
+  }
+  console.log(((n -2) * 180) - sum)
+</script>
+
+<script id="ch0105/09">
+
+  var m = +prompt('m')
+  var n = +prompt('n')
+  var j = m - 1
+  var sum = 0
+  for(var number = m - 1;number <= n;number++){
+    j++
+    if(j <= n && j % 2 ===1){
+       sum += j
+    }
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0105/10">
+  var m = +prompt('m')
+  var n = +prompt('n')
+  var j = m - 1
+  var sum = 0
+  for(var number = m - 1;number <= n;number++){
+    j++
+    if(j <= n && j % 17 === 0){
+       sum += j
+    }
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0105/11">
+  var k = +prompt('个数')
+  var sumone = 0
+  var sumfive = 0
+  var sumten = 0
+  for(var number = 0;number < k;number++){
+    var x = +prompt('x')
+    if(x == 1){
+      sumone++
+    }
+    if(x == 5){
+      sumfive++
+    }
+    if(x == 10){
+      sumten++
+    }
+  }
+  console.log(sumone,sumfive,sumten)
+</script>
+
+<script id="ch0105/12">
+  var n = +prompt('个数')
+  var m = +prompt('指定数字')
+  var summ = 0
+  for(var number = 0;number < n;number++){
+    var x = +prompt('x')
+    if(x == m){
+      summ++
+    }
+  }
+  console.log(summ)
+</script>
+
+<script id="ch0105/13">
+  var a = +prompt('底')
+  var n = +prompt('幂')
+  var x = Math.pow(a,n)
+  if(-1000000 <= x && x <= 1000000){
+    console.log(Math.pow(a,n))
+  }
+</script>
+
+<script id="ch0105/14">
+  var x = +prompt('人口')
+  var n = +prompt('年数')
+  for(var number = 0;number < n;number++){
+     var y = x + (x * 0.001)
+     if(y > x){
+      var x = y
+     }
+  }
+  console.log((x).toFixed(4))
+</script>
+
+<script id="ch0105/15">
+  var r = +prompt('利率')
+  var m = +prompt('金额')
+  var y = +prompt('年数')
+  for(var number = 0;number < y;number++){
+     var x = m + (m * (r / 100))
+     if(x > m){
+      var m = x
+     }
+  }
+  console.log(Math.floor(x))
+</script>
+
+<script id="ch0105/16">
+  var n = +prompt('收入')
+  var k = +prompt('涨幅')
+  var m = 200
+  var year = 1
+  for(var r = 0;r <21;r++){
+    year++
+    m = m + (m * (k/100))
+    if((year * n >= m) && year <= 20){
+      console.log(year)
+      break
+    }
+    if(year > 20)(
+      console.log('Impossible')
+    )
+  }
+</script>
+
+<script id="ch0105/17">
+  var k = +prompt('第几个数')
+  var pre = 1
+  var cur = 1
+  var data = 0
+  if(k == 1 || k == 2){
+    console.log(1)
+  }
+  if(k > 2){
+    for(var i =0;i <= (k - 3);i++){
+      data = pre + cur
+      pre = cur
+      cur = data
+    }
+  }
+  console.log(data)
+</script>
+
+<script id="ch0105/18">
+  var n = +prompt('对照组数')
+  var jhas = +prompt('患病人数')
+  var jcure = +prompt('治愈数')
+  var x = jcure / jhas
+
+  for(i = 1;i <= (n-1);i++){
+    var has = +prompt('患病人数')
+    var cure = +prompt('治愈数')
+    var y = cure / has
+    if(y - x > 0.05){
+    console.log('better')
+    }else if(x - y > 0.05){
+      console.log('worse')
+    }else{
+      console.log('same')
+    }
+  }
+</script>
+
+<script id="ch0105/19">
+  var n = +prompt('屋顶数')
+  var sum = 0
+  for(i = 1;i <= n;i++){
+    var x = +prompt('横坐标')
+    var y = +prompt('纵坐标')
+    var z = +prompt('人数')
+    var time = ((Math.sqrt((x*x)+(y*y))) * 2)  / 50 + 1.5*z
+    sum += time
+  }
+  console.log(Math.ceil(sum))
+</script>
+
+<script id="ch0105/20">
+  var h = +prompt('初始高度')
+  var ft1 = 0
+  var h2 = h
+  var ft2 = 0
+  var sumjl = 20
+  for(var i = 1;i<=10;i++){
+    ft1 = h / 2
+    h = ft1
+  }
+  for(var r = 1;r <= 9;r++){
+    ft2 = h2 / 2
+    sumjl = sumjl + ( 2 * ft2)
+    h2 = ft2
+  }
+  console.log((sumjl).toFixed(4),(ft1).toFixed(7))
+</script>
+
+<script id="ch0105/21">
+  var n = +prompt('正整数')
+  var x = 0
+  if(n == 1){
+      console.log('End')
+  }else {
+    do{
+    if(n % 2 == 0){
+      x = n / 2
+      console.log(n + '/' + 2 + '=' + x)
+    }else if(n % 2 == 1 && n != 1){
+      x = (n * 3) + 1
+      console.log(n + '*' + 3 + '+' + 1 + '=' + x)
+    }
+    n = x
+  }while(n != 1)
+  if(x === 1){
+      console.log('End')
+    }
+  }
+</script>
+
+<script id="ch0105/22">
+
+</script>
