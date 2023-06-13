@@ -888,5 +888,149 @@ console.log(n > 0 ? 'positive' :(n < 0 ? 'negative' : 'zero'))
 </script>
 
 <script id="ch0105/37">
+  var m = +prompt('m')
+  var n = +prompt('n')
+  var x = +prompt('x')
+  do{
+    x = x - (1/x) * (Math.ceil(m / n))
+    n = Math.floor(m / n) + n
+  }while(x > 0)
+  console.log(n)
+</script>
 
+<script id="ch0105/38">
+ var t = +prompt('组数')
+ for(var i = 0;i < t; i++){
+  var n = +prompt('最高次幂')
+  var e = n
+  for(var j = 0;j <= n;j++){
+    var c = +prompt('数')
+    if(j != n || n == 0){
+      console.log(c * e)
+    }
+    e--
+  }
+ }
+</script>
+
+<script id="ch0105/39">
+  var n = +prompt('数字')
+  var sum = 0
+  for(var i = 0;i <= n;i++){
+    if(i % 7 != 0 && i % 10 != 7 && (i - i % 10) != 7){
+      sum += i * i
+    }
+  }
+  console.log(sum)
+ </script>
+
+<script id="ch0105/40">
+  var n = +prompt('数')
+  var sum = 0
+  for(var i = 1;i <= n;i++){
+    var y = i
+    for(var x = 0;x <= 5;x++){
+      var m = 0
+      m = y % 10
+      y = (y - m) / 10
+      if(m == 1){
+        sum++
+      }
+    }
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0105/41">
+ var L = +prompt()
+ var R = +prompt()
+ var sum = 0
+ for(var n = L;n <= R;n++){
+  var m = n
+  for(var x = 0;x <= R;x++){
+    var y = m % 10
+    m = (m - y) / 10
+    if(y==2){
+      sum++
+    }
+  }
+ }
+ console.log(sum)
+</script>
+
+<script id="ch0105/42">
+ var h = +prompt()
+ var w = +prompt()
+ var char = prompt()
+ var fill = +prompt()
+ var result = ''
+ for(var i = 0;i < h;i++){
+  for(var j = 0;j < w;j++){
+    if(j == 0 || j == w-1 || i == 0 || i == h-1){
+      result += char
+    }else{
+      if(fill == 1){
+        result += char
+      }else{
+        result += ' '
+      }
+    }
+  }
+  result += '\n'
+ }
+ console.log(result)
+</script>
+
+<script id="ch0105/43">
+  var n = +prompt()
+  for(var i = 0;i < n;i++){
+    if(n % i == 0){
+      console.log(i)
+      break
+    }
+  }
+ </script>
+
+<script id="ch0105/44">
+  var n = +prompt()
+
+  function isprime(n){
+    var sqrt_n = Math.sqrt(n)
+    if(n < 2){
+      return false
+    }
+    for(var i = 2;i <= sqrt_n;i++){
+      if(n % i == 0){
+        return false
+      }
+    }
+    return true
+  }
+
+  var c = 0
+  for(var i = 2; ;i++){
+    if(isprime(i)){
+      c++
+      if(c == n){
+        console.log(i)
+        break
+      }
+    }
+  }
+</script>
+
+<script id="ch0105/45">
+  var n = +prompt()
+  var sum = 0
+  var dqed = 1
+  var dqedts = 0
+  for(var i = 1;i <= n;i++){
+    sum += dqed
+    dqedts++
+    if(dqedts == dqed){
+      dqed++
+      dqedts = 0
+    }
+  }
+  console.log(sum)
 </script>
