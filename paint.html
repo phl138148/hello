@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="1000" height="1000"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated' //放大时的插帧方式：不插帧，直接放大像素
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    x = Math.trunc(x)
+    y = Math.trunc(y)
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * 你的任务：通过调用dot函数，实现：
+   * 需要注意，dot函数不能接收浮点数，如果参数为浮点数，会被转换为整数后绘制
+      * 在 坐标 (42, 42) 画出一个点
+      * 画一条水平实线，粗细为一个像素
+      * 画一条水平实线，粗细为一个像素
+      * 画一条一个实点一个空点的虚线
+      * 画一条两个实点两个空点的虚线
+      * 画一条三个实点两个空点的虚线
+      * 画一条45度的斜线
+      * 画一条30度的斜线（与x轴或y轴的夹角呈30度）
+      * 画一条跨越画布左上角和右下角的对角线
+      * 画一个空心矩形
+      * 画一个实心矩形
+      * 画两个空心的圆，圆心在画布中心：
+        * 一个半径为50像素
+        * 一个半径为200像素
+      * 画一个实心的圆，半径至少为100像素
+      * 画一个【大小位置都合适】的sin(x)的图像
+
+      * 画出rgb色彩空间的某一面（尺寸要大于100x100）
+      * 如果做出上一题后，尝试将其每个点的坐标乘以一个矩阵（如(2,0,0,2)或(1,0.27得到新的位置，即绘制出被线性变换后的色彩空间某一面
+        可以考虑如下几种矩阵：
+           2 0
+           0 2
+           ------
+           1  0.27
+           0  1
+           ------
+           0.5    0.87
+           -0.87  0.5
+
+   */
+</script>
+<script>
+  // 不可更改上面的代码
+  // 你的代码写在这里
+  dot(42,42,'red')
+  for(var x = 50;x < 200;x++){
+    dot(x,50)
+  }
+  for(var y = 50;y < 200;y++){
+    dot(50,y)
+  }
+  for(var x = 50;x < 200;x++){
+    if(x % 2 == 0){
+      dot(x,200)
+    }
+  }
+  for(var y = 50;y < 200;y++){
+    if(y % 4 == 1 || y % 4 ==2){
+      dot(200,y)
+    }
+  }
+  for(var x = 50;x < 200;x++){
+    if(x % 5 == 1 || x % 5 == 2 || x % 5 == 3){
+      dot(x,125)
+    }
+  }
+  for(var z = 50;z < 200;z++){
+    dot(z,z,'red')
+  }
+  for(var z = 0;z < 200;z++){
+    dot(z,0.4 * z,'red')
+  }
+  for(var z = 0;z < 200;z++){
+    dot(z,1.5 * z,'red')
+  }
+  for(var z = 0;z < 500;z++){
+    dot(z,0.8 * z,'red')
+  }
+  var x1 = 100
+  var y1 = 100
+  for(var x = 100;x <= 150;x++){
+    for(var y = 100;y <= 250;y++){
+      if(x == x1 || y == y1 || x == 150 || y == 250){
+      dot(x,y,'yellow')
+      }
+    }
+  }
+  var x2 = 200
+  var y2 = 100
+  for(var x = 200;x <= 250;x++){
+    for(var y = 100;y <= 250;y++){
+      if(x >= x2 || y >= y2){
+      dot(x,y,'yellow')
+      }
+    }
+  }
+  for(var x = -50 * .7;x <= 50 * .7;x++){
+    var y = Math.sqrt(50 * 50 - x * x)
+    dot(x + 250, y + 200)
+    dot(x + 250, -y + 200)
+  }
+  for(var y = -50 * .7;y <= 50 * .7;y++){
+    var x = Math.sqrt(50 * 50 - y * y)
+    dot(x + 250, y + 200)
+    dot(-x + 250, y + 200)
+  }
+  function circle(cx,cy,r,color){
+    var start = Math.ceil(r * Math.SQRT1_2)
+    for(var x = -start;x <= start;x++){
+    var y = Math.sqrt(r * r - x * x)
+    dot(x + cx, y + cy)
+    dot(x + cx, -y + cy)
+    }
+    for(var y = -start;y <= start;y++){
+    var x = Math.sqrt(r * r - y * y)
+    dot(x + cx, y + cy)
+    dot(-x + cx, y + cy)
+    }
+  }
+  for(var x = -200 * .7;x <= 200 * .7;x++){
+    var y = Math.sqrt(200 * 200 - x * x)
+    dot(x + 250, y + 200)
+    dot(x + 250, -y + 200)
+  }
+  for(var y = -200 * .7;y <= 200 * .7;y++){
+    var x = Math.sqrt(200 * 200 - y * y)
+    dot(x + 250, y + 200)
+    dot(-x + 250, y + 200)
+  }
+  for(var r = 0;r <= 100;r++){
+    circle(150,150,r,'red')
+  }
+  for(var x = 0;x < 2000;x++){
+    var y = Math.sin(x / 10) * 10
+    dot(x,y + 20,'lime')
+  }
+  for(var x = 0;x < 256;x++){
+    for(var y = 0;y < 256;y++){
+      dot(x + 300,y + 200,'rgb(' + x + ',' + y + ', 255 )')
+    }
+  }
+  var ax = 500
+  var ay = 100
+  var bx = 630
+  var by = 350
+  var cx = 950
+  var cy = 50
+  for(var t = 0;t <= 1;t += 0.001){
+    var x = ax * (1 - t) * (1-t) + 2 * bx * t * (1 - t) + cx * t * t
+    var y = ay * (1 - t) * (1-t) + 2 * by * t * (1 - t) + cy * t * t
+    dot(x,y)
+  }
+</script>
+</html>
