@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      .completed {
+      /* .completed {
         text-decoration: line-through;
         opacity: 0.5;
-      }
+      } */
       input {
         outline: none;
         user-select: none;
@@ -22,6 +22,17 @@
       ul.visible-completed li:not(.completed) {
         display: none;
       }
+      li.active .kuang{
+        border:1px solid white;
+        display:inline-block;
+        width: 100px;
+      }
+      li.completed .kuang{
+        display: inline-block;
+        width: 100px;
+        text-decoration: line-through;
+        opacity: 0.5;
+      }
     </style>
   </head>
   <body>
@@ -34,7 +45,7 @@
       <ul id="todo-list" :class="`visible-${visibleTodos}`">
         <li :class="todo.completed ?'completed' :'active'" v-for="(todo,idx) of 计算出需要显示的(todos)">
           <input data-index="0" type="checkbox" :checked="todo.completed" @change="changeTodoState(idx)">
-          <span v-show="editIdx !== idx" @dblclick="edit(idx)">{{ todo.content }}</span>
+          <span v-show="editIdx !== idx" @dblclick="edit(idx)" class="kuang">{{ todo.content }}</span>
           <input
             @keyup.enter="todo.content = $event.target.value.trim();editIdx = -1"
             @blur="todo.content = $event.target.value.trim();editIdx = -1"
