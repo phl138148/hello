@@ -53,7 +53,7 @@
           <label><input type="radio" @click="visibleTodos = $event.target.value" value="active" name="visible-todos">Active</label>
           <label><input type="radio" @click="visibleTodos = $event.target.value" value="completed" name="visible-todos">Completed</label>
         </div>
-        <button @click="clearCompleted()" v-shows="todos.some(it => it.completed)">Clear completed</button>
+        <button @click="clearCompleted()" v-show="todos.some(it => it.completed)">Clear completed</button>
       </div>
     </div>
     <script src="./vue-2.7.14.js"></script>
