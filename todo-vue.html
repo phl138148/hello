@@ -115,7 +115,7 @@
             },
             toggleAll() {
               if (this.todos.every(it => it.completed)) {
-                this, todos.forEach(it => {
+                this.todos.forEach(it => {
                   it.completed = false
                 })
               } else {
