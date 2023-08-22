@@ -39,11 +39,11 @@
     <div class="container">
       <h1>todos</h1>
       <div>
-        <input type="checkbox" class="togggle-all" @click="toggleAll()" :checked="todos.length && todos.every(it => it.completed)">
-        <input type="text" @keyup.enter="addTodo($event)" placeholder="what needs to be done?">
+        <input type="checkbox" class="togggle-all" @click="toggleAll" :checked="全选">
+        <input type="text" v-model="inputText" @keyup.enter="addTodo" placeholder="what needs to be done?">
       </div>
       <ul id="todo-list" :class="`visible-${visibleTodos}`">
-        <li :class="todo.completed ?'completed' :'active'" v-for="(todo,idx) of 计算出需要显示的(todos)">
+        <li :class="{'todo-item':true,completed:todo.completed,active:!todo.completed}" v-for="(todo,idx) of 计算出需要显示的(todos)">
           <input data-index="0" type="checkbox" :checked="todo.completed" @change="changeTodoState(idx)">
           <span v-show="editIdx !== idx" @dblclick="edit(idx)" class="kuang">{{ todo.content }}</span>
           <input
@@ -58,13 +58,15 @@
         </li>
       </ul>
       <div>
-        <span><em>{{ todos.filter(it => !it.completed).length }}</em>items left</span>
+        <span><em>{{ 剩余数量 }}</em>items left</span>
         <div class="visible-select">
           <label><input type="radio" @click="visibleTodos = $event.target.value" value="all" name="visible-todos" checked>All</label>
           <label><input type="radio" @click="visibleTodos = $event.target.value" value="active" name="visible-todos">Active</label>
           <label><input type="radio" @click="visibleTodos = $event.target.value" value="completed" name="visible-todos">Completed</label>
         </div>
-        <button @click="clearCompleted()" v-show="todos.some(it => it.completed)">Clear completed</button>
+        <button :style="{width:'130px',color:'yellow',backgroundColor:'skyblue',borderColor:'white'}" @click="clearCompleted" v-show="是否显示">Clear completed</button>
+        <div :style="{marginTop:'10px',color:'blue',width:'130px',backgroundColor:'pink',lineHeight:3}" v-if="剩余数量 <= 0">恭喜完成今日任务</div>
+        <div :style="{marginTop:'10px',color:'red',width:'260px',backgroundColor:'black',lineHeight:5,fontSize:'20px'}" v-else>革命尚未成功，同志任需努力</div>
       </div>
     </div>
     <script src="./vue-2.7.14.js"></script>
@@ -82,6 +84,7 @@
               content: '睡觉',
               completed: true,
             }],
+            inputText:'',
             visibleTodos: 'all',
             editIdx: -1,
           },
@@ -92,6 +95,17 @@
                 localStorage.setItem('todos', JSON.stringify(this.todos))
               },
             }
+          },
+          computed:{
+            剩余数量(){
+              return this.todos.filter(it => !it.completed).length
+            },
+            是否显示(){
+              return this.todos.some(it => it.completed)
+            },
+            全选(){
+              return this.todos.length && this.todos.every(it => it.completed)
+            },
           },
           methods: {
             edit(idx) {
@@ -109,13 +123,13 @@
               this.todos = this.todos.filter(it => !it.completed)
             },
             addTodo(e) {
-              var text = e.target.value.trim()
+              var text = this.inputText
               if (text) {
                 this.todos.push({
                   content: text,
                   completed: false,
                 })
-                e.target.value = ''
+                this.inputText = ''
               }
             },
             deleteTodo(idx) {
