@@ -43,8 +43,8 @@
         <input type="text" v-model="inputText" @keyup.enter="addTodo" placeholder="what needs to be done?">
       </div>
       <ul id="todo-list" :class="`visible-${visibleTodos}`">
-        <li :class="{'todo-item':true,completed:todo.completed,active:!todo.completed}" v-for="(todo,idx) of 计算出需要显示的(todos)">
-          <input data-index="0" type="checkbox" :checked="todo.completed" @change="changeTodoState(idx)">
+        <li :class="{'todo-item':true,completed:todo.completed,active:!todo.completed}" v-for="(todo,idx) of 计算出需要显示的(todos)" :key="todos-id">
+          <input data-index="0" type="checkbox" v-model="todo.completed" >
           <span v-show="editIdx !== idx" @dblclick="edit(idx)" class="kuang">{{ todo.content }}</span>
           <input
             @keyup.enter="todo.content = $event.target.value.trim();editIdx = -1"
@@ -126,6 +126,7 @@
               var text = this.inputText
               if (text) {
                 this.todos.push({
+                  id:Math.random().toString(36).slice(2),
                   content: text,
                   completed: false,
                 })
@@ -134,9 +135,6 @@
             },
             deleteTodo(idx) {
               this.todos.splice(idx, 1)
-            },
-            changeTodoState(idx) {
-              this.todos[idx].completed = !this.todos[idx].completed
             },
             toggleAll() {
               if (this.todos.every(it => it.completed)) {
